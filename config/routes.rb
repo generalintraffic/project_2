@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   
-  get '/token' => 'user#get_token'
-  post '/neighboar' => 'user#neighbour_traffic'
-  post '/simulation' => 'user#simulation'
+  root 'welcome#index'
+  get '/token' => 'users#get_token'
+  post '/neighboar' => 'users#neighbour_traffic'
+  post '/simulation' => 'users#simulation'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

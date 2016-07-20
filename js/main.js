@@ -1,7 +1,7 @@
 
 L.mapbox.accessToken = 'pk.eyJ1IjoiamF2aWVyMyIsImEiOiJjaXFzcDYzZHowMnhnZm5ubndxdWo0anJoIn0.3ANHMEByhAl7OFnMlwwSrA';
 var map = L.mapbox.map('map', 'mapbox.streets')
-    .setView([38.9, -77], 12);
+    .setView([10.488824641652126,-66.87480926513672], 14);
 
 init();
 var fixedMarker, count = true, x = true;
@@ -18,6 +18,7 @@ function init(){
 			}
 			else if ( count == false && x== true ) {
 				map.removeLayer(fixedMarker)
+				map.removeLayer(fixedCircle)
 				coord = [ev.latlng.lat, ev.latlng.lng];
 				coordinates(coord);
 				console.log(coord);
@@ -27,20 +28,21 @@ function init(){
 };
 
 function coordinates(coord){
-	var coord = coord;
+	/*var coord = coord;*/
 	console.log('coord ' + coord);
 	fixedMarker = L.marker(new L.LatLng(coord[0],coord[1]), {
 		icon: L.mapbox.marker.icon({
 		  'marker-color': 'ff8888'
 		})
-	}).bindPopup('Mapbox DC').addTo(map);
+	}).bindPopup('Punto de Origen').addTo(map);
+	fixedCircle = L.circle(coord, 300).addTo(map)
 	return fixedMarker;
 };
 
 function myFunction() {
 	
 	
-	if (confirm("Do you wish to continue?") == true) {
+	if (confirm("¿Desea confirmar el punto actual?") == true) {
 		text();
 		x = false;
 	} else {

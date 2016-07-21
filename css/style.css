@@ -9,17 +9,17 @@ body {
     top:0; bottom:0;
      width:100%; 
    }
-
-
-
-
-
-
-
-
-
-
-
+#btn1 {
+  position:absolute;
+  bottom:10px;
+  right:10px;
+  padding:5px 10px;
+  background:rgba(0,0,0,0.5);
+  color:#fff;
+  font-size:11px;
+  line-height:18px;
+  border-radius:3px;
+  }
 pre.ui-distance {
   position:absolute;
   bottom:10px;
@@ -31,4 +31,15 @@ pre.ui-distance {
   line-height:18px;
   border-radius:3px;
   }
+  #button-wrapper {
+    position:absolute;
+    bottom:5%;
+    right:16px;
+    padding:5px 10px;
+    background:rgba(0,0,0,0.5);
+    color:#fff;
+    font-size:11px;
+    line-height:18px;
+    border-radius:3px;
+    }
 

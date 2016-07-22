@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   
+  devise_for :users
   get '/token' => 'users#get_token'
-  post '/neighboar' => 'users#neighbour_traffic'
+  get '/neighbour' => 'users#neighbour_traffic'
   post '/simulation' => 'users#simulation'
 
   # The priority is based upon order of creation: first created -> highest priority.

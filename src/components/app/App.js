@@ -1,28 +1,27 @@
-
 import React from "react";
 import $ from "jquery";
-import calle from './calle'
-//Mapa de ejemplo de Mapbox
+
+import Origin from "./origin";
+
+export default class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      data: map
+    }
+  }
+
+render() {
+   return (
+    <div className="App">
+      <h1> HOLA GENTE DE HACK! </h1>
+        {this.state.data}
+     		<Origin data={this.state.data}/>
+    </div>
+   );
+ }
+}
 
 
 
-
-
-L.mapbox.accessToken = 'pk.eyJ1IjoiamF2aWVyMyIsImEiOiJjaXFzcDYzZHowMnhnZm5ubndxdWo0anJoIn0.3ANHMEByhAl7OFnMlwwSrA';
-var map = L.mapbox.map('map', 'mapbox.streets')
-    .setView([38.9, -77], 12);
-    
-var countriesLayer = L.geoJson(
-  calle
-  // {
-  //   style: countriesStyle
-  //   // onEachFeature: countriesOnEachFeature
-  // }
-).addTo(map);
-map.fitBounds(countriesLayer.getBounds());
-
-
-
-
-
-export default App;
+// export default App;

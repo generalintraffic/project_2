@@ -1,21 +1,28 @@
 class UsersController < ApplicationController
   
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
 
   def get_token
-    @user = User.find(current_user)
+    @user = User.find(1)
     @user.token = @user.uriToken[:access_token]
     @user.save
+    render json: @user
+  end
+
+  def dataPointers
+    @user = User.find(1)
+    pointers = params[:coordinates]
+    respond = @user.publicRoutes(@user.token, pointers)
+    if respond['type'].present?
+      render json: respond
+    elsif respond['error'].present?
+      render json: respond['error']
+    end
   end
 
   def neighbour_traffic
-    @user = User.find(current_user)
-    respond = @user.publicRoutes(@user.token)
-    if respond.kind_of?(Array)
-      render json: respond[0]['id']
-    elsif respond.kind_of?(Hash)
-      render json: respond['error']
-    end
+    any = params[:range]
+    render json: any
   end
 
   private

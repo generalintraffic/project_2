@@ -2,8 +2,8 @@ Rails.application.routes.draw do
   
   devise_for :users
   get '/token' => 'users#get_token'
-  get '/neighbour' => 'users#neighbour_traffic'
-  post '/simulation' => 'users#simulation'
+  post '/pointers' => 'users#dataPointers'
+  post '/neighbour' => 'users#neighbour_traffic'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

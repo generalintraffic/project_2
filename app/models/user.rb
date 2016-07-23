@@ -27,13 +27,16 @@ class User < ActiveRecord::Base
     return response
   end
 
-  def publicRoutes(token)
-    url = URI('https://api.intraffic.com.ve/routes/public.json')
-    https = Net::HTTP.new(url.host,url.port)
+  def publicRoutes(token, points)
+    url = 'https://api.intraffic.com.ve/routing.geojson'
+    params = CGI.unescape({'points' => [points[:points][0], points[:points][1]]}.to_query)
+    uri = URI([url, params].join("?"))
+    
+    https = Net::HTTP.new(uri.host,uri.port)
     https.use_ssl = true
     https.verify_mode = OpenSSL::SSL::VERIFY_NONE
     
-    req = https.get(url.path, {
+    req = https.get(uri, {
       "user-agent" => "develop",
       "authorization" => "Bearer " + token,
       "cache-control" => "no-cache"

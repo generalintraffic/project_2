@@ -1,6 +1,6 @@
-module.exports = {
-  "type": "FeatureCollection",
-  "features": [
+ {
+  "type"; "FeatureCollection",
+  "features"; [
     {
       "type": "Feature",
       "geometry": {
@@ -267,3 +267,4 @@ module.exports = {
     }
   ]
 }
+   

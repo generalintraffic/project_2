@@ -30015,3 +30015,1242 @@ DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`
   [1m[35mSQL (88.1ms)[0m  UPDATE "users" SET "token" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["token", "10a6aee29eb56161a6e8c6547c3edee58ebd0511"], ["updated_at", "2016-07-25 16:46:28.686772"], ["id", 2]]
   [1m[36m (216.5ms)[0m  [1mcommit transaction[0m
 Completed 200 OK in 1302ms (Views: 1.0ms | ActiveRecord: 305.6ms)
+
+
+Started GET "/token" for 127.0.0.1 at 2016-07-25 15:03:52 -0400
+Processing by UsersController#get_token as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from get_token at /home/loldlm/Academia-hack/proyecto_final/NeighbourIntraffic/app/controllers/users_controller.rb:6)
+  [1m[36mUser Load (29.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (38.0ms)[0m  [1mUPDATE "users" SET "token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["token", "38846a21c70d3b5914cee1caacd9bf7a60c5c19d"], ["updated_at", "2016-07-25 19:04:01.998963"], ["id", 2]]
+  [1m[35m (138.7ms)[0m  commit transaction
+  Rendered users/get_token.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 10316ms (Views: 3273.0ms | ActiveRecord: 239.9ms)
+
+
+Started GET "/token" for 127.0.0.1 at 2016-07-25 16:08:15 -0400
+Processing by UsersController#get_token as HTML
+  [1m[36mUser Load (58.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from get_token at /home/loldlm/Academia-hack/proyecto_final/NeighbourIntraffic/app/controllers/users_controller.rb:6)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (39.1ms)[0m  UPDATE "users" SET "token" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["token", "bb089cdfa466a39201e19151d7ea4a41020a2119"], ["updated_at", "2016-07-25 20:08:17.522789"], ["id", 2]]
+  [1m[36m (155.5ms)[0m  [1mcommit transaction[0m
+  Rendered users/get_token.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 4309ms (Views: 2352.7ms | ActiveRecord: 253.6ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-25 16:08:20 -0400
+
+
+Started GET "/assets/application.self-5814749134ee232e95d0a94c87bfcdfaa4ade1813e8830a025d726b5fb0682da.css?body=1" for 127.0.0.1 at 2016-07-25 16:08:21 -0400
+
+
+Started GET "/assets/leaflet.self-c586f9a074399d87ecfe9b87e819f86390348631bc17b52f09bca64dcc315f71.css?body=1" for 127.0.0.1 at 2016-07-25 16:08:21 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-25 16:08:21 -0400
+
+
+Started GET "/assets/mapbox.self-10624cd2edcc6adf3f022eb3237e22a0075a357fac916a4dc9e1eee40b29efff.css?body=1" for 127.0.0.1 at 2016-07-25 16:08:21 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-25 16:08:21 -0400
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-07-25 16:08:21 -0400
+
+
+Started GET "/assets/npm-rails/development/npm-dependencies.self-f469c6a162ce951bd6b15cac8825345003e22f04643d5811901e0113697e9abe.js?body=1" for 127.0.0.1 at 2016-07-25 16:08:21 -0400
+
+
+Started GET "/assets/MovingMarker.self-55b93b039b582fad17de7995f910cbbd10ee9abca9d9db0401d15be483c87bc0.js?body=1" for 127.0.0.1 at 2016-07-25 16:08:21 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-07-25 16:08:21 -0400
+
+
+Started GET "/assets/users.self-7d9fa452fcd09e9931b483debbf677a4bdf45eef250b72b720289d254f96ac40.js?body=1" for 127.0.0.1 at 2016-07-25 16:08:21 -0400
+
+
+Started GET "/token" for 127.0.0.1 at 2016-07-25 16:11:14 -0400
+Processing by UsersController#get_token as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from get_token at /home/loldlm/Academia-hack/proyecto_final/NeighbourIntraffic/app/controllers/users_controller.rb:6)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "users" SET "token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["token", "53df642d1c1f7c4ce21f9bca2c38ffa25eb4bcf0"], ["updated_at", "2016-07-25 20:11:16.112639"], ["id", 2]]
+  [1m[35m (150.9ms)[0m  commit transaction
+  Rendered users/get_token.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1955ms (Views: 417.9ms | ActiveRecord: 152.2ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-25 16:11:16 -0400
+
+
+Started GET "/assets/application.self-5814749134ee232e95d0a94c87bfcdfaa4ade1813e8830a025d726b5fb0682da.css?body=1" for 127.0.0.1 at 2016-07-25 16:11:16 -0400
+
+
+Started GET "/assets/leaflet.self-c586f9a074399d87ecfe9b87e819f86390348631bc17b52f09bca64dcc315f71.css?body=1" for 127.0.0.1 at 2016-07-25 16:11:16 -0400
+
+
+Started GET "/assets/mapbox.self-10624cd2edcc6adf3f022eb3237e22a0075a357fac916a4dc9e1eee40b29efff.css?body=1" for 127.0.0.1 at 2016-07-25 16:11:17 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-25 16:11:17 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-25 16:11:17 -0400
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-07-25 16:11:17 -0400
+
+
+Started GET "/assets/npm-rails/development/npm-dependencies.self-f469c6a162ce951bd6b15cac8825345003e22f04643d5811901e0113697e9abe.js?body=1" for 127.0.0.1 at 2016-07-25 16:11:17 -0400
+
+
+Started GET "/assets/MovingMarker.self-55b93b039b582fad17de7995f910cbbd10ee9abca9d9db0401d15be483c87bc0.js?body=1" for 127.0.0.1 at 2016-07-25 16:11:17 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-07-25 16:11:17 -0400
+
+
+Started GET "/assets/users.self-43b1e4bbaa702ee9f6c10ffae93853307bb49410e069c3e8e3330338956a8303.js?body=1" for 127.0.0.1 at 2016-07-25 16:11:17 -0400
+
+
+Started GET "/token" for 127.0.0.1 at 2016-07-25 16:12:26 -0400
+Processing by UsersController#get_token as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from get_token at /home/loldlm/Academia-hack/proyecto_final/NeighbourIntraffic/app/controllers/users_controller.rb:6)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "token" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["token", "3b5c0edaa496583f9cd0a8ce4eab6bf63f4e79cd"], ["updated_at", "2016-07-25 20:12:29.011327"], ["id", 2]]
+  [1m[36m (130.1ms)[0m  [1mcommit transaction[0m
+  Rendered users/get_token.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 5275ms (Views: 2325.0ms | ActiveRecord: 131.5ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-25 16:12:31 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-25 16:12:31 -0400
+
+
+Started GET "/assets/mapbox.self-10624cd2edcc6adf3f022eb3237e22a0075a357fac916a4dc9e1eee40b29efff.css?body=1" for 127.0.0.1 at 2016-07-25 16:12:31 -0400
+
+
+Started GET "/assets/leaflet.self-c586f9a074399d87ecfe9b87e819f86390348631bc17b52f09bca64dcc315f71.css?body=1" for 127.0.0.1 at 2016-07-25 16:12:31 -0400
+
+
+Started GET "/assets/application.self-5814749134ee232e95d0a94c87bfcdfaa4ade1813e8830a025d726b5fb0682da.css?body=1" for 127.0.0.1 at 2016-07-25 16:12:31 -0400
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-07-25 16:12:31 -0400
+
+
+Started GET "/assets/npm-rails/development/npm-dependencies.self-f469c6a162ce951bd6b15cac8825345003e22f04643d5811901e0113697e9abe.js?body=1" for 127.0.0.1 at 2016-07-25 16:12:31 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-25 16:12:31 -0400
+
+
+Started GET "/assets/MovingMarker.self-55b93b039b582fad17de7995f910cbbd10ee9abca9d9db0401d15be483c87bc0.js?body=1" for 127.0.0.1 at 2016-07-25 16:12:31 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-07-25 16:12:31 -0400
+
+
+Started GET "/assets/users.self-6c02b0c162b6af430530c4cce9f9a6b7ae8ef7cd576542aeded8640839da7d44.js?body=1" for 127.0.0.1 at 2016-07-25 16:12:31 -0400
+
+
+Started GET "/token" for 127.0.0.1 at 2016-07-25 16:25:08 -0400
+Processing by UsersController#get_token as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from get_token at /home/loldlm/Academia-hack/proyecto_final/NeighbourIntraffic/app/controllers/users_controller.rb:6)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "users" SET "token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["token", "f320221b98a07776e07d44d72260637144a822e7"], ["updated_at", "2016-07-25 20:25:10.480972"], ["id", 2]]
+  [1m[35m (394.7ms)[0m  commit transaction
+  Rendered users/get_token.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2871ms (Views: 309.3ms | ActiveRecord: 396.3ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-25 16:25:11 -0400
+
+
+Started GET "/assets/application.self-5814749134ee232e95d0a94c87bfcdfaa4ade1813e8830a025d726b5fb0682da.css?body=1" for 127.0.0.1 at 2016-07-25 16:25:11 -0400
+
+
+Started GET "/assets/leaflet.self-c586f9a074399d87ecfe9b87e819f86390348631bc17b52f09bca64dcc315f71.css?body=1" for 127.0.0.1 at 2016-07-25 16:25:11 -0400
+
+
+Started GET "/assets/mapbox.self-10624cd2edcc6adf3f022eb3237e22a0075a357fac916a4dc9e1eee40b29efff.css?body=1" for 127.0.0.1 at 2016-07-25 16:25:11 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-25 16:25:12 -0400
+
+
+Started GET "/assets/npm-rails/development/npm-dependencies.self-f469c6a162ce951bd6b15cac8825345003e22f04643d5811901e0113697e9abe.js?body=1" for 127.0.0.1 at 2016-07-25 16:25:12 -0400
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-07-25 16:25:13 -0400
+
+
+Started GET "/assets/MovingMarker.self-55b93b039b582fad17de7995f910cbbd10ee9abca9d9db0401d15be483c87bc0.js?body=1" for 127.0.0.1 at 2016-07-25 16:25:13 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-25 16:25:13 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-07-25 16:25:13 -0400
+
+
+Started GET "/assets/users.self-d3c59ff1c0b7a1f5cd78d8dc871ed669b53d6aeebd2658490e2324b09f08f343.js?body=1" for 127.0.0.1 at 2016-07-25 16:25:13 -0400
+
+
+Started GET "/token" for 127.0.0.1 at 2016-07-25 16:25:29 -0400
+Processing by UsersController#get_token as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from get_token at /home/loldlm/Academia-hack/proyecto_final/NeighbourIntraffic/app/controllers/users_controller.rb:6)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.7ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "users" SET "token" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["token", "049d33f7cc908df8f511664f2517af1905d7f610"], ["updated_at", "2016-07-25 20:25:36.115288"], ["id", 2]]
+  [1m[36m (135.2ms)[0m  [1mcommit transaction[0m
+  Rendered users/get_token.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 7917ms (Views: 1468.1ms | ActiveRecord: 137.1ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-25 16:25:37 -0400
+
+
+Started GET "/assets/application.self-5814749134ee232e95d0a94c87bfcdfaa4ade1813e8830a025d726b5fb0682da.css?body=1" for 127.0.0.1 at 2016-07-25 16:25:37 -0400
+
+
+Started GET "/assets/leaflet.self-c586f9a074399d87ecfe9b87e819f86390348631bc17b52f09bca64dcc315f71.css?body=1" for 127.0.0.1 at 2016-07-25 16:25:38 -0400
+
+
+Started GET "/assets/mapbox.self-10624cd2edcc6adf3f022eb3237e22a0075a357fac916a4dc9e1eee40b29efff.css?body=1" for 127.0.0.1 at 2016-07-25 16:25:38 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-25 16:25:38 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-25 16:25:38 -0400
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-07-25 16:25:38 -0400
+
+
+Started GET "/assets/npm-rails/development/npm-dependencies.self-f469c6a162ce951bd6b15cac8825345003e22f04643d5811901e0113697e9abe.js?body=1" for 127.0.0.1 at 2016-07-25 16:25:38 -0400
+
+
+Started GET "/assets/MovingMarker.self-55b93b039b582fad17de7995f910cbbd10ee9abca9d9db0401d15be483c87bc0.js?body=1" for 127.0.0.1 at 2016-07-25 16:25:38 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-07-25 16:25:38 -0400
+
+
+Started GET "/assets/users.self-e62cc02d42c31b069585721be4e4c4adb001d6fb6082fe0fe762fa2ad28cbf2d.js?body=1" for 127.0.0.1 at 2016-07-25 16:25:38 -0400
+
+
+Started GET "/token" for 127.0.0.1 at 2016-07-25 16:28:08 -0400
+Processing by UsersController#get_token as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from get_token at /home/loldlm/Academia-hack/proyecto_final/NeighbourIntraffic/app/controllers/users_controller.rb:6)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "users" SET "token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["token", "3b733fa9a778ad10945558fb2f8c8559e2a21edd"], ["updated_at", "2016-07-25 20:28:10.240597"], ["id", 2]]
+  [1m[35m (114.5ms)[0m  commit transaction
+  Rendered users/get_token.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1969ms (Views: 142.1ms | ActiveRecord: 116.2ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-25 16:28:10 -0400
+
+
+Started GET "/assets/application.self-5814749134ee232e95d0a94c87bfcdfaa4ade1813e8830a025d726b5fb0682da.css?body=1" for 127.0.0.1 at 2016-07-25 16:28:10 -0400
+
+
+Started GET "/assets/leaflet.self-c586f9a074399d87ecfe9b87e819f86390348631bc17b52f09bca64dcc315f71.css?body=1" for 127.0.0.1 at 2016-07-25 16:28:10 -0400
+
+
+Started GET "/assets/mapbox.self-10624cd2edcc6adf3f022eb3237e22a0075a357fac916a4dc9e1eee40b29efff.css?body=1" for 127.0.0.1 at 2016-07-25 16:28:10 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-25 16:28:10 -0400
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-07-25 16:28:10 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-25 16:28:10 -0400
+
+
+Started GET "/assets/npm-rails/development/npm-dependencies.self-f469c6a162ce951bd6b15cac8825345003e22f04643d5811901e0113697e9abe.js?body=1" for 127.0.0.1 at 2016-07-25 16:28:10 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-07-25 16:28:10 -0400
+
+
+Started GET "/assets/MovingMarker.self-55b93b039b582fad17de7995f910cbbd10ee9abca9d9db0401d15be483c87bc0.js?body=1" for 127.0.0.1 at 2016-07-25 16:28:10 -0400
+
+
+Started GET "/assets/users.self-0f1a27033ae4c7fae25562c20fc4a851a5ea7f17c7d5f74220ee9d92518cb979.js?body=1" for 127.0.0.1 at 2016-07-25 16:28:10 -0400
+
+
+Started GET "/token" for 127.0.0.1 at 2016-07-25 16:28:49 -0400
+Processing by UsersController#get_token as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from get_token at /home/loldlm/Academia-hack/proyecto_final/NeighbourIntraffic/app/controllers/users_controller.rb:6)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "token" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["token", "9a1fdda2f7a6cdb02f8e69e0b4b7695966bad6ae"], ["updated_at", "2016-07-25 20:28:52.054511"], ["id", 2]]
+  [1m[36m (121.0ms)[0m  [1mcommit transaction[0m
+  Rendered users/get_token.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2953ms (Views: 148.6ms | ActiveRecord: 122.1ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-25 16:28:52 -0400
+
+
+Started GET "/assets/application.self-5814749134ee232e95d0a94c87bfcdfaa4ade1813e8830a025d726b5fb0682da.css?body=1" for 127.0.0.1 at 2016-07-25 16:28:52 -0400
+
+
+Started GET "/assets/leaflet.self-c586f9a074399d87ecfe9b87e819f86390348631bc17b52f09bca64dcc315f71.css?body=1" for 127.0.0.1 at 2016-07-25 16:28:52 -0400
+
+
+Started GET "/assets/mapbox.self-10624cd2edcc6adf3f022eb3237e22a0075a357fac916a4dc9e1eee40b29efff.css?body=1" for 127.0.0.1 at 2016-07-25 16:28:52 -0400
+
+
+Started GET "/assets/npm-rails/development/npm-dependencies.self-f469c6a162ce951bd6b15cac8825345003e22f04643d5811901e0113697e9abe.js?body=1" for 127.0.0.1 at 2016-07-25 16:28:52 -0400
+
+
+Started GET "/assets/MovingMarker.self-55b93b039b582fad17de7995f910cbbd10ee9abca9d9db0401d15be483c87bc0.js?body=1" for 127.0.0.1 at 2016-07-25 16:28:52 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-25 16:28:52 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-25 16:28:52 -0400
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-07-25 16:28:52 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-07-25 16:28:52 -0400
+
+
+Started GET "/assets/users.self-e6fda000c9e25b3997d095987376768824bed36217c07638741ab5d83355767a.js?body=1" for 127.0.0.1 at 2016-07-25 16:28:52 -0400
+
+
+Started GET "/token" for 127.0.0.1 at 2016-07-25 16:30:16 -0400
+Processing by UsersController#get_token as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from get_token at /home/loldlm/Academia-hack/proyecto_final/NeighbourIntraffic/app/controllers/users_controller.rb:6)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["token", "3167253402ccdef33e904ed5470ede9b13234150"], ["updated_at", "2016-07-25 20:30:19.288654"], ["id", 2]]
+  [1m[35m (145.2ms)[0m  commit transaction
+  Rendered users/get_token.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2629ms (Views: 186.0ms | ActiveRecord: 146.4ms)
+
+
+Started GET "/token" for 127.0.0.1 at 2016-07-25 16:30:19 -0400
+Processing by UsersController#get_token as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from get_token at /home/loldlm/Academia-hack/proyecto_final/NeighbourIntraffic/app/controllers/users_controller.rb:6)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "token" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["token", "948099e4ba11c0533e0424f8db376cb6496ee4ce"], ["updated_at", "2016-07-25 20:30:21.038693"], ["id", 2]]
+  [1m[36m (145.8ms)[0m  [1mcommit transaction[0m
+  Rendered users/get_token.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1655ms (Views: 98.0ms | ActiveRecord: 147.0ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-25 16:30:21 -0400
+
+
+Started GET "/assets/application.self-5814749134ee232e95d0a94c87bfcdfaa4ade1813e8830a025d726b5fb0682da.css?body=1" for 127.0.0.1 at 2016-07-25 16:30:21 -0400
+
+
+Started GET "/assets/leaflet.self-c586f9a074399d87ecfe9b87e819f86390348631bc17b52f09bca64dcc315f71.css?body=1" for 127.0.0.1 at 2016-07-25 16:30:21 -0400
+
+
+Started GET "/assets/mapbox.self-10624cd2edcc6adf3f022eb3237e22a0075a357fac916a4dc9e1eee40b29efff.css?body=1" for 127.0.0.1 at 2016-07-25 16:30:21 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-25 16:30:21 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-25 16:30:21 -0400
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-07-25 16:30:21 -0400
+
+
+Started GET "/assets/npm-rails/development/npm-dependencies.self-f469c6a162ce951bd6b15cac8825345003e22f04643d5811901e0113697e9abe.js?body=1" for 127.0.0.1 at 2016-07-25 16:30:21 -0400
+
+
+Started GET "/assets/MovingMarker.self-55b93b039b582fad17de7995f910cbbd10ee9abca9d9db0401d15be483c87bc0.js?body=1" for 127.0.0.1 at 2016-07-25 16:30:21 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-07-25 16:30:21 -0400
+
+
+Started GET "/assets/users.self-d5b5518c6c8f97849752123431211697dfff66e00ced6e6ad5996b032a2488a6.js?body=1" for 127.0.0.1 at 2016-07-25 16:30:21 -0400
+
+
+Started GET "/token" for 127.0.0.1 at 2016-07-25 16:31:37 -0400
+Processing by UsersController#get_token as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from get_token at /home/loldlm/Academia-hack/proyecto_final/NeighbourIntraffic/app/controllers/users_controller.rb:6)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["token", "65d7c28735d4397d02fe1f434d5f815cb25fadae"], ["updated_at", "2016-07-25 20:31:38.092915"], ["id", 2]]
+  [1m[35m (120.5ms)[0m  commit transaction
+  Rendered users/get_token.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1126ms (Views: 112.6ms | ActiveRecord: 121.9ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-25 16:31:38 -0400
+
+
+Started GET "/assets/leaflet.self-c586f9a074399d87ecfe9b87e819f86390348631bc17b52f09bca64dcc315f71.css?body=1" for 127.0.0.1 at 2016-07-25 16:31:38 -0400
+
+
+Started GET "/assets/application.self-5814749134ee232e95d0a94c87bfcdfaa4ade1813e8830a025d726b5fb0682da.css?body=1" for 127.0.0.1 at 2016-07-25 16:31:38 -0400
+
+
+Started GET "/assets/mapbox.self-10624cd2edcc6adf3f022eb3237e22a0075a357fac916a4dc9e1eee40b29efff.css?body=1" for 127.0.0.1 at 2016-07-25 16:31:38 -0400
+
+
+Started GET "/assets/npm-rails/development/npm-dependencies.self-f469c6a162ce951bd6b15cac8825345003e22f04643d5811901e0113697e9abe.js?body=1" for 127.0.0.1 at 2016-07-25 16:31:38 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-25 16:31:38 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-25 16:31:38 -0400
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-07-25 16:31:38 -0400
+
+
+Started GET "/assets/MovingMarker.self-55b93b039b582fad17de7995f910cbbd10ee9abca9d9db0401d15be483c87bc0.js?body=1" for 127.0.0.1 at 2016-07-25 16:31:38 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-07-25 16:31:38 -0400
+
+
+Started GET "/assets/users.self-f03173f7124cfeb608e666c056f2e766f793680734d573b1c1b0692342d687cb.js?body=1" for 127.0.0.1 at 2016-07-25 16:31:38 -0400
+
+
+Started GET "/token" for 127.0.0.1 at 2016-07-25 16:32:25 -0400
+Processing by UsersController#get_token as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from get_token at /home/loldlm/Academia-hack/proyecto_final/NeighbourIntraffic/app/controllers/users_controller.rb:6)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "token" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["token", "ab61ff300e4d50bf2e8ad2892d1f49e64a0c57c2"], ["updated_at", "2016-07-25 20:32:26.870084"], ["id", 2]]
+  [1m[36m (124.9ms)[0m  [1mcommit transaction[0m
+  Rendered users/get_token.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1527ms (Views: 85.1ms | ActiveRecord: 126.2ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-25 16:32:27 -0400
+
+
+Started GET "/assets/application.self-5814749134ee232e95d0a94c87bfcdfaa4ade1813e8830a025d726b5fb0682da.css?body=1" for 127.0.0.1 at 2016-07-25 16:32:27 -0400
+
+
+Started GET "/assets/leaflet.self-c586f9a074399d87ecfe9b87e819f86390348631bc17b52f09bca64dcc315f71.css?body=1" for 127.0.0.1 at 2016-07-25 16:32:27 -0400
+
+
+Started GET "/assets/mapbox.self-10624cd2edcc6adf3f022eb3237e22a0075a357fac916a4dc9e1eee40b29efff.css?body=1" for 127.0.0.1 at 2016-07-25 16:32:27 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-25 16:32:27 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-25 16:32:27 -0400
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-07-25 16:32:27 -0400
+
+
+Started GET "/assets/MovingMarker.self-55b93b039b582fad17de7995f910cbbd10ee9abca9d9db0401d15be483c87bc0.js?body=1" for 127.0.0.1 at 2016-07-25 16:32:27 -0400
+
+
+Started GET "/assets/npm-rails/development/npm-dependencies.self-f469c6a162ce951bd6b15cac8825345003e22f04643d5811901e0113697e9abe.js?body=1" for 127.0.0.1 at 2016-07-25 16:32:27 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-07-25 16:32:27 -0400
+
+
+Started GET "/assets/users.self-10042e198c0e185795fddd8ce3633ae9209c00eeda973f82665ec0dca133c9d0.js?body=1" for 127.0.0.1 at 2016-07-25 16:32:27 -0400
+
+
+Started GET "/token" for 127.0.0.1 at 2016-07-25 16:39:01 -0400
+Processing by UsersController#get_token as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from get_token at /home/loldlm/Academia-hack/proyecto_final/NeighbourIntraffic/app/controllers/users_controller.rb:6)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mUPDATE "users" SET "token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["token", "2e52a246dc90f887c82621570576db798f9fef75"], ["updated_at", "2016-07-25 20:39:03.094066"], ["id", 2]]
+  [1m[35m (139.5ms)[0m  commit transaction
+  Rendered users/get_token.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1766ms (Views: 120.2ms | ActiveRecord: 141.2ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-25 16:39:03 -0400
+
+
+Started GET "/assets/application.self-5814749134ee232e95d0a94c87bfcdfaa4ade1813e8830a025d726b5fb0682da.css?body=1" for 127.0.0.1 at 2016-07-25 16:39:03 -0400
+
+
+Started GET "/assets/leaflet.self-c586f9a074399d87ecfe9b87e819f86390348631bc17b52f09bca64dcc315f71.css?body=1" for 127.0.0.1 at 2016-07-25 16:39:03 -0400
+
+
+Started GET "/assets/mapbox.self-10624cd2edcc6adf3f022eb3237e22a0075a357fac916a4dc9e1eee40b29efff.css?body=1" for 127.0.0.1 at 2016-07-25 16:39:03 -0400
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-07-25 16:39:03 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-25 16:39:03 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-25 16:39:03 -0400
+
+
+Started GET "/assets/npm-rails/development/npm-dependencies.self-f469c6a162ce951bd6b15cac8825345003e22f04643d5811901e0113697e9abe.js?body=1" for 127.0.0.1 at 2016-07-25 16:39:03 -0400
+
+
+Started GET "/assets/MovingMarker.self-55b93b039b582fad17de7995f910cbbd10ee9abca9d9db0401d15be483c87bc0.js?body=1" for 127.0.0.1 at 2016-07-25 16:39:03 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-07-25 16:39:03 -0400
+
+
+Started GET "/assets/users.self-1f93d9a95c9ae3d4044ff4a68a118f62bfbea47fdd5e283f46ad5328d329f3fa.js?body=1" for 127.0.0.1 at 2016-07-25 16:39:03 -0400
+
+
+Started GET "/token" for 127.0.0.1 at 2016-07-25 16:40:09 -0400
+Processing by UsersController#get_token as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from get_token at /home/loldlm/Academia-hack/proyecto_final/NeighbourIntraffic/app/controllers/users_controller.rb:6)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  UPDATE "users" SET "token" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["token", "1eae52d5d1e39b3408209a0f53fac650621c202b"], ["updated_at", "2016-07-25 20:40:11.238587"], ["id", 2]]
+  [1m[36m (119.6ms)[0m  [1mcommit transaction[0m
+  Rendered users/get_token.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 1672ms (Views: 126.8ms | ActiveRecord: 121.4ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-25 16:40:11 -0400
+
+
+Started GET "/assets/application.self-5814749134ee232e95d0a94c87bfcdfaa4ade1813e8830a025d726b5fb0682da.css?body=1" for 127.0.0.1 at 2016-07-25 16:40:11 -0400
+
+
+Started GET "/assets/leaflet.self-c586f9a074399d87ecfe9b87e819f86390348631bc17b52f09bca64dcc315f71.css?body=1" for 127.0.0.1 at 2016-07-25 16:40:11 -0400
+
+
+Started GET "/assets/mapbox.self-10624cd2edcc6adf3f022eb3237e22a0075a357fac916a4dc9e1eee40b29efff.css?body=1" for 127.0.0.1 at 2016-07-25 16:40:11 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-25 16:40:11 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-25 16:40:11 -0400
+
+
+Started GET "/assets/MovingMarker.self-55b93b039b582fad17de7995f910cbbd10ee9abca9d9db0401d15be483c87bc0.js?body=1" for 127.0.0.1 at 2016-07-25 16:40:11 -0400
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-07-25 16:40:11 -0400
+
+
+Started GET "/assets/npm-rails/development/npm-dependencies.self-f469c6a162ce951bd6b15cac8825345003e22f04643d5811901e0113697e9abe.js?body=1" for 127.0.0.1 at 2016-07-25 16:40:11 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-07-25 16:40:11 -0400
+
+
+Started GET "/assets/users.self-29357d8209ddc69a9343973ff20dfbff7cf97e2bb275e06cf9b2d1642c961e0c.js?body=1" for 127.0.0.1 at 2016-07-25 16:40:11 -0400
+
+
+Started GET "/token" for 127.0.0.1 at 2016-07-25 16:40:31 -0400
+Processing by UsersController#get_token as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from get_token at /home/loldlm/Academia-hack/proyecto_final/NeighbourIntraffic/app/controllers/users_controller.rb:6)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["token", "cc3707a01743c5347bfaa49b4ff6fd50cab371cc"], ["updated_at", "2016-07-25 20:40:33.137827"], ["id", 2]]
+  [1m[35m (136.9ms)[0m  commit transaction
+  Rendered users/get_token.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2270ms (Views: 107.0ms | ActiveRecord: 138.1ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-25 16:40:33 -0400
+
+
+Started GET "/assets/application.self-5814749134ee232e95d0a94c87bfcdfaa4ade1813e8830a025d726b5fb0682da.css?body=1" for 127.0.0.1 at 2016-07-25 16:40:33 -0400
+
+
+Started GET "/assets/leaflet.self-c586f9a074399d87ecfe9b87e819f86390348631bc17b52f09bca64dcc315f71.css?body=1" for 127.0.0.1 at 2016-07-25 16:40:33 -0400
+
+
+Started GET "/assets/mapbox.self-10624cd2edcc6adf3f022eb3237e22a0075a357fac916a4dc9e1eee40b29efff.css?body=1" for 127.0.0.1 at 2016-07-25 16:40:33 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-25 16:40:33 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-25 16:40:33 -0400
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-07-25 16:40:33 -0400
+
+
+Started GET "/assets/npm-rails/development/npm-dependencies.self-f469c6a162ce951bd6b15cac8825345003e22f04643d5811901e0113697e9abe.js?body=1" for 127.0.0.1 at 2016-07-25 16:40:33 -0400
+
+
+Started GET "/assets/MovingMarker.self-55b93b039b582fad17de7995f910cbbd10ee9abca9d9db0401d15be483c87bc0.js?body=1" for 127.0.0.1 at 2016-07-25 16:40:33 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-07-25 16:40:33 -0400
+
+
+Started GET "/assets/users.self-e829e0281d4aaba71267872ae58b1755b6b5b9cd15776986de6f51e41e24ef5c.js?body=1" for 127.0.0.1 at 2016-07-25 16:40:33 -0400
+
+
+Started GET "/token" for 127.0.0.1 at 2016-07-25 16:41:16 -0400
+Processing by UsersController#get_token as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from get_token at /home/loldlm/Academia-hack/proyecto_final/NeighbourIntraffic/app/controllers/users_controller.rb:6)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "users" SET "token" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["token", "8f1fe99c04676988c2b07bb547fb5cdce6ecede6"], ["updated_at", "2016-07-25 20:41:18.093448"], ["id", 2]]
+  [1m[36m (129.1ms)[0m  [1mcommit transaction[0m
+  Rendered users/get_token.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1552ms (Views: 126.2ms | ActiveRecord: 130.5ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-25 16:41:18 -0400
+
+
+Started GET "/assets/application.self-5814749134ee232e95d0a94c87bfcdfaa4ade1813e8830a025d726b5fb0682da.css?body=1" for 127.0.0.1 at 2016-07-25 16:41:18 -0400
+
+
+Started GET "/assets/leaflet.self-c586f9a074399d87ecfe9b87e819f86390348631bc17b52f09bca64dcc315f71.css?body=1" for 127.0.0.1 at 2016-07-25 16:41:18 -0400
+
+
+Started GET "/assets/mapbox.self-10624cd2edcc6adf3f022eb3237e22a0075a357fac916a4dc9e1eee40b29efff.css?body=1" for 127.0.0.1 at 2016-07-25 16:41:18 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-25 16:41:18 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-07-25 16:41:18 -0400
+
+
+Started GET "/assets/MovingMarker.self-55b93b039b582fad17de7995f910cbbd10ee9abca9d9db0401d15be483c87bc0.js?body=1" for 127.0.0.1 at 2016-07-25 16:41:18 -0400
+
+
+Started GET "/assets/npm-rails/development/npm-dependencies.self-f469c6a162ce951bd6b15cac8825345003e22f04643d5811901e0113697e9abe.js?body=1" for 127.0.0.1 at 2016-07-25 16:41:18 -0400
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-07-25 16:41:18 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-25 16:41:18 -0400
+
+
+Started GET "/assets/users.self-9b2baa16e6d5582eeb11fccefc6fba71d8f8e1cfc5c9c18022af419beaedbfd9.js?body=1" for 127.0.0.1 at 2016-07-25 16:41:18 -0400
+
+
+Started GET "/token" for 127.0.0.1 at 2016-07-25 16:41:50 -0400
+Processing by UsersController#get_token as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from get_token at /home/loldlm/Academia-hack/proyecto_final/NeighbourIntraffic/app/controllers/users_controller.rb:6)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "users" SET "token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["token", "56e068699b730e6290e8ca57b912f8f455991954"], ["updated_at", "2016-07-25 20:41:51.905415"], ["id", 2]]
+  [1m[35m (114.3ms)[0m  commit transaction
+  Rendered users/get_token.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1660ms (Views: 141.0ms | ActiveRecord: 116.1ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-25 16:41:52 -0400
+
+
+Started GET "/assets/application.self-5814749134ee232e95d0a94c87bfcdfaa4ade1813e8830a025d726b5fb0682da.css?body=1" for 127.0.0.1 at 2016-07-25 16:41:52 -0400
+
+
+Started GET "/assets/leaflet.self-c586f9a074399d87ecfe9b87e819f86390348631bc17b52f09bca64dcc315f71.css?body=1" for 127.0.0.1 at 2016-07-25 16:41:52 -0400
+
+
+Started GET "/assets/mapbox.self-10624cd2edcc6adf3f022eb3237e22a0075a357fac916a4dc9e1eee40b29efff.css?body=1" for 127.0.0.1 at 2016-07-25 16:41:52 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-25 16:41:52 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-25 16:41:52 -0400
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-07-25 16:41:52 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-07-25 16:41:52 -0400
+
+
+Started GET "/assets/MovingMarker.self-55b93b039b582fad17de7995f910cbbd10ee9abca9d9db0401d15be483c87bc0.js?body=1" for 127.0.0.1 at 2016-07-25 16:41:52 -0400
+
+
+Started GET "/assets/npm-rails/development/npm-dependencies.self-f469c6a162ce951bd6b15cac8825345003e22f04643d5811901e0113697e9abe.js?body=1" for 127.0.0.1 at 2016-07-25 16:41:52 -0400
+
+
+Started GET "/assets/users.self-5db21909664bd8187aed7aec8c8100e1f912c6198c3eacc62e992999a6f42c1d.js?body=1" for 127.0.0.1 at 2016-07-25 16:41:52 -0400
+
+
+Started GET "/token" for 127.0.0.1 at 2016-07-25 16:43:10 -0400
+Processing by UsersController#get_token as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from get_token at /home/loldlm/Academia-hack/proyecto_final/NeighbourIntraffic/app/controllers/users_controller.rb:6)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "token" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["token", "db20de95372b793f48fe8b3d5057c42f3c3dd152"], ["updated_at", "2016-07-25 20:43:11.327098"], ["id", 2]]
+  [1m[36m (130.3ms)[0m  [1mcommit transaction[0m
+  Rendered users/get_token.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1310ms (Views: 134.6ms | ActiveRecord: 131.6ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-25 16:43:11 -0400
+
+
+Started GET "/assets/application.self-5814749134ee232e95d0a94c87bfcdfaa4ade1813e8830a025d726b5fb0682da.css?body=1" for 127.0.0.1 at 2016-07-25 16:43:11 -0400
+
+
+Started GET "/assets/leaflet.self-c586f9a074399d87ecfe9b87e819f86390348631bc17b52f09bca64dcc315f71.css?body=1" for 127.0.0.1 at 2016-07-25 16:43:11 -0400
+
+
+Started GET "/assets/mapbox.self-10624cd2edcc6adf3f022eb3237e22a0075a357fac916a4dc9e1eee40b29efff.css?body=1" for 127.0.0.1 at 2016-07-25 16:43:11 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-25 16:43:11 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-25 16:43:11 -0400
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-07-25 16:43:11 -0400
+
+
+Started GET "/assets/npm-rails/development/npm-dependencies.self-f469c6a162ce951bd6b15cac8825345003e22f04643d5811901e0113697e9abe.js?body=1" for 127.0.0.1 at 2016-07-25 16:43:11 -0400
+
+
+Started GET "/assets/MovingMarker.self-55b93b039b582fad17de7995f910cbbd10ee9abca9d9db0401d15be483c87bc0.js?body=1" for 127.0.0.1 at 2016-07-25 16:43:11 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-07-25 16:43:11 -0400
+
+
+Started GET "/assets/users.self-920192027a70d0fb5db95146fbae57af9db09c3a8a7e9d1e6db47388fe1a7b40.js?body=1" for 127.0.0.1 at 2016-07-25 16:43:11 -0400
+
+
+Started GET "/token" for 127.0.0.1 at 2016-07-25 16:43:42 -0400
+Processing by UsersController#get_token as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from get_token at /home/loldlm/Academia-hack/proyecto_final/NeighbourIntraffic/app/controllers/users_controller.rb:6)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["token", "2cca0355a778fa888ce59e3a52073554f65791d9"], ["updated_at", "2016-07-25 20:43:44.054008"], ["id", 2]]
+  [1m[35m (135.0ms)[0m  commit transaction
+  Rendered users/get_token.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1646ms (Views: 131.2ms | ActiveRecord: 136.1ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-25 16:43:44 -0400
+
+
+Started GET "/assets/application.self-5814749134ee232e95d0a94c87bfcdfaa4ade1813e8830a025d726b5fb0682da.css?body=1" for 127.0.0.1 at 2016-07-25 16:43:44 -0400
+
+
+Started GET "/assets/leaflet.self-c586f9a074399d87ecfe9b87e819f86390348631bc17b52f09bca64dcc315f71.css?body=1" for 127.0.0.1 at 2016-07-25 16:43:44 -0400
+
+
+Started GET "/assets/mapbox.self-10624cd2edcc6adf3f022eb3237e22a0075a357fac916a4dc9e1eee40b29efff.css?body=1" for 127.0.0.1 at 2016-07-25 16:43:44 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-25 16:43:44 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-25 16:43:44 -0400
+
+
+Started GET "/assets/npm-rails/development/npm-dependencies.self-f469c6a162ce951bd6b15cac8825345003e22f04643d5811901e0113697e9abe.js?body=1" for 127.0.0.1 at 2016-07-25 16:43:44 -0400
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-07-25 16:43:44 -0400
+
+
+Started GET "/assets/MovingMarker.self-55b93b039b582fad17de7995f910cbbd10ee9abca9d9db0401d15be483c87bc0.js?body=1" for 127.0.0.1 at 2016-07-25 16:43:44 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-07-25 16:43:44 -0400
+
+
+Started GET "/assets/users.self-7ce90567042ccf48429d0627aefa066717110227c7783e01b6c79d59e834b048.js?body=1" for 127.0.0.1 at 2016-07-25 16:43:44 -0400
+
+
+Started GET "/token" for 127.0.0.1 at 2016-07-25 16:44:49 -0400
+Processing by UsersController#get_token as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from get_token at /home/loldlm/Academia-hack/proyecto_final/NeighbourIntraffic/app/controllers/users_controller.rb:6)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  UPDATE "users" SET "token" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["token", "6bc42e74210b1c7c39d24cacab7683e4d0062b2a"], ["updated_at", "2016-07-25 20:44:51.193305"], ["id", 2]]
+  [1m[36m (122.9ms)[0m  [1mcommit transaction[0m
+  Rendered users/get_token.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1817ms (Views: 122.1ms | ActiveRecord: 124.3ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-25 16:44:51 -0400
+
+
+Started GET "/assets/application.self-5814749134ee232e95d0a94c87bfcdfaa4ade1813e8830a025d726b5fb0682da.css?body=1" for 127.0.0.1 at 2016-07-25 16:44:51 -0400
+
+
+Started GET "/assets/leaflet.self-c586f9a074399d87ecfe9b87e819f86390348631bc17b52f09bca64dcc315f71.css?body=1" for 127.0.0.1 at 2016-07-25 16:44:51 -0400
+
+
+Started GET "/assets/mapbox.self-10624cd2edcc6adf3f022eb3237e22a0075a357fac916a4dc9e1eee40b29efff.css?body=1" for 127.0.0.1 at 2016-07-25 16:44:51 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-25 16:44:51 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-25 16:44:51 -0400
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-07-25 16:44:51 -0400
+
+
+Started GET "/assets/npm-rails/development/npm-dependencies.self-f469c6a162ce951bd6b15cac8825345003e22f04643d5811901e0113697e9abe.js?body=1" for 127.0.0.1 at 2016-07-25 16:44:51 -0400
+
+
+Started GET "/assets/MovingMarker.self-55b93b039b582fad17de7995f910cbbd10ee9abca9d9db0401d15be483c87bc0.js?body=1" for 127.0.0.1 at 2016-07-25 16:44:51 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-07-25 16:44:51 -0400
+
+
+Started GET "/assets/users.self-353356595f0e0c8e20dd383e5ee270c0c5ca4da31ba5b3c90e16669f14150d37.js?body=1" for 127.0.0.1 at 2016-07-25 16:44:51 -0400
+
+
+Started GET "/token" for 127.0.0.1 at 2016-07-25 16:46:40 -0400
+Processing by UsersController#get_token as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from get_token at /home/loldlm/Academia-hack/proyecto_final/NeighbourIntraffic/app/controllers/users_controller.rb:6)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "users" SET "token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["token", "6a175012a182c6766e11cd602404840fff87fdda"], ["updated_at", "2016-07-25 20:46:42.270652"], ["id", 2]]
+  [1m[35m (120.1ms)[0m  commit transaction
+  Rendered users/get_token.html.erb within layouts/application (41.1ms)
+Completed 200 OK in 1581ms (Views: 124.2ms | ActiveRecord: 121.5ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-25 16:46:42 -0400
+
+
+Started GET "/assets/application.self-5814749134ee232e95d0a94c87bfcdfaa4ade1813e8830a025d726b5fb0682da.css?body=1" for 127.0.0.1 at 2016-07-25 16:46:42 -0400
+
+
+Started GET "/assets/leaflet.self-c586f9a074399d87ecfe9b87e819f86390348631bc17b52f09bca64dcc315f71.css?body=1" for 127.0.0.1 at 2016-07-25 16:46:42 -0400
+
+
+Started GET "/assets/mapbox.self-10624cd2edcc6adf3f022eb3237e22a0075a357fac916a4dc9e1eee40b29efff.css?body=1" for 127.0.0.1 at 2016-07-25 16:46:42 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-25 16:46:42 -0400
+
+
+Started GET "/assets/npm-rails/development/npm-dependencies.self-f469c6a162ce951bd6b15cac8825345003e22f04643d5811901e0113697e9abe.js?body=1" for 127.0.0.1 at 2016-07-25 16:46:42 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-25 16:46:42 -0400
+
+
+Started GET "/assets/MovingMarker.self-55b93b039b582fad17de7995f910cbbd10ee9abca9d9db0401d15be483c87bc0.js?body=1" for 127.0.0.1 at 2016-07-25 16:46:42 -0400
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-07-25 16:46:42 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-07-25 16:46:42 -0400
+
+
+Started GET "/assets/users.self-353356595f0e0c8e20dd383e5ee270c0c5ca4da31ba5b3c90e16669f14150d37.js?body=1" for 127.0.0.1 at 2016-07-25 16:46:42 -0400
+
+
+Started GET "/token" for 127.0.0.1 at 2016-07-25 16:47:55 -0400
+Processing by UsersController#get_token as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from get_token at /home/loldlm/Academia-hack/proyecto_final/NeighbourIntraffic/app/controllers/users_controller.rb:6)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "token" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["token", "0cb420635a0b140a5d5f2fd4aeb6ae375e5c5162"], ["updated_at", "2016-07-25 20:47:56.028106"], ["id", 2]]
+  [1m[36m (149.6ms)[0m  [1mcommit transaction[0m
+  Rendered users/get_token.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1357ms (Views: 191.6ms | ActiveRecord: 150.8ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-25 16:47:56 -0400
+
+
+Started GET "/assets/application.self-c3677990e8391690a0928978b96e671aefbfeab2d3d0cc985419a5ca3a789f90.css?body=1" for 127.0.0.1 at 2016-07-25 16:47:56 -0400
+
+
+Started GET "/assets/leaflet.self-c586f9a074399d87ecfe9b87e819f86390348631bc17b52f09bca64dcc315f71.css?body=1" for 127.0.0.1 at 2016-07-25 16:47:56 -0400
+
+
+Started GET "/assets/mapbox.self-10624cd2edcc6adf3f022eb3237e22a0075a357fac916a4dc9e1eee40b29efff.css?body=1" for 127.0.0.1 at 2016-07-25 16:47:56 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-25 16:47:56 -0400
+
+
+Started GET "/assets/MovingMarker.self-55b93b039b582fad17de7995f910cbbd10ee9abca9d9db0401d15be483c87bc0.js?body=1" for 127.0.0.1 at 2016-07-25 16:47:56 -0400
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-07-25 16:47:56 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-25 16:47:56 -0400
+
+
+Started GET "/assets/npm-rails/development/npm-dependencies.self-f469c6a162ce951bd6b15cac8825345003e22f04643d5811901e0113697e9abe.js?body=1" for 127.0.0.1 at 2016-07-25 16:47:56 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-07-25 16:47:56 -0400
+
+
+Started GET "/assets/users.self-353356595f0e0c8e20dd383e5ee270c0c5ca4da31ba5b3c90e16669f14150d37.js?body=1" for 127.0.0.1 at 2016-07-25 16:47:56 -0400
+
+
+Started GET "/token" for 127.0.0.1 at 2016-07-25 16:50:09 -0400
+Processing by UsersController#get_token as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from get_token at /home/loldlm/Academia-hack/proyecto_final/NeighbourIntraffic/app/controllers/users_controller.rb:6)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["token", "4a0173b81ef3b136fdcd665d5a338d6485f6c562"], ["updated_at", "2016-07-25 20:50:10.036438"], ["id", 2]]
+  [1m[35m (137.4ms)[0m  commit transaction
+  Rendered users/get_token.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1167ms (Views: 119.7ms | ActiveRecord: 138.6ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-25 16:50:10 -0400
+
+
+Started GET "/assets/application.self-c3677990e8391690a0928978b96e671aefbfeab2d3d0cc985419a5ca3a789f90.css?body=1" for 127.0.0.1 at 2016-07-25 16:50:10 -0400
+
+
+Started GET "/assets/leaflet.self-c586f9a074399d87ecfe9b87e819f86390348631bc17b52f09bca64dcc315f71.css?body=1" for 127.0.0.1 at 2016-07-25 16:50:10 -0400
+
+
+Started GET "/assets/mapbox.self-10624cd2edcc6adf3f022eb3237e22a0075a357fac916a4dc9e1eee40b29efff.css?body=1" for 127.0.0.1 at 2016-07-25 16:50:10 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-25 16:50:10 -0400
+
+
+Started GET "/assets/MovingMarker.self-55b93b039b582fad17de7995f910cbbd10ee9abca9d9db0401d15be483c87bc0.js?body=1" for 127.0.0.1 at 2016-07-25 16:50:10 -0400
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-07-25 16:50:10 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-25 16:50:10 -0400
+
+
+Started GET "/assets/npm-rails/development/npm-dependencies.self-f469c6a162ce951bd6b15cac8825345003e22f04643d5811901e0113697e9abe.js?body=1" for 127.0.0.1 at 2016-07-25 16:50:10 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-07-25 16:50:10 -0400
+
+
+Started GET "/assets/users.self-5f1839dc2f71b442c456af7aecf441eb054a86799d8c7fa8c10e6e9a8539060e.js?body=1" for 127.0.0.1 at 2016-07-25 16:50:10 -0400
+
+
+Started GET "/token" for 127.0.0.1 at 2016-07-25 16:50:35 -0400
+Processing by UsersController#get_token as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from get_token at /home/loldlm/Academia-hack/proyecto_final/NeighbourIntraffic/app/controllers/users_controller.rb:6)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "users" SET "token" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["token", "661c5963428a6472683a40939d18f0b3ffd28f0c"], ["updated_at", "2016-07-25 20:50:38.109645"], ["id", 2]]
+  [1m[36m (132.3ms)[0m  [1mcommit transaction[0m
+  Rendered users/get_token.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2537ms (Views: 64.0ms | ActiveRecord: 133.7ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-25 16:50:38 -0400
+
+
+Started GET "/assets/application.self-c3677990e8391690a0928978b96e671aefbfeab2d3d0cc985419a5ca3a789f90.css?body=1" for 127.0.0.1 at 2016-07-25 16:50:38 -0400
+
+
+Started GET "/assets/leaflet.self-c586f9a074399d87ecfe9b87e819f86390348631bc17b52f09bca64dcc315f71.css?body=1" for 127.0.0.1 at 2016-07-25 16:50:38 -0400
+
+
+Started GET "/assets/mapbox.self-10624cd2edcc6adf3f022eb3237e22a0075a357fac916a4dc9e1eee40b29efff.css?body=1" for 127.0.0.1 at 2016-07-25 16:50:38 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-25 16:50:38 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-25 16:50:38 -0400
+
+
+Started GET "/assets/npm-rails/development/npm-dependencies.self-f469c6a162ce951bd6b15cac8825345003e22f04643d5811901e0113697e9abe.js?body=1" for 127.0.0.1 at 2016-07-25 16:50:38 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-07-25 16:50:38 -0400
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-07-25 16:50:38 -0400
+
+
+Started GET "/assets/users.self-5f1839dc2f71b442c456af7aecf441eb054a86799d8c7fa8c10e6e9a8539060e.js?body=1" for 127.0.0.1 at 2016-07-25 16:50:38 -0400
+
+
+Started GET "/assets/MovingMarker.self-55b93b039b582fad17de7995f910cbbd10ee9abca9d9db0401d15be483c87bc0.js?body=1" for 127.0.0.1 at 2016-07-25 16:50:38 -0400
+
+
+Started GET "/token" for 127.0.0.1 at 2016-07-25 16:53:56 -0400
+Processing by UsersController#get_token as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from get_token at /home/loldlm/Academia-hack/proyecto_final/NeighbourIntraffic/app/controllers/users_controller.rb:6)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["token", "2c5523ab0ef4715a64875d67483f291eb3c135fd"], ["updated_at", "2016-07-25 20:53:58.906422"], ["id", 2]]
+  [1m[35m (132.6ms)[0m  commit transaction
+  Rendered users/get_token.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 2258ms (Views: 141.3ms | ActiveRecord: 133.8ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-25 16:53:59 -0400
+
+
+Started GET "/assets/leaflet.self-c586f9a074399d87ecfe9b87e819f86390348631bc17b52f09bca64dcc315f71.css?body=1" for 127.0.0.1 at 2016-07-25 16:53:59 -0400
+
+
+Started GET "/assets/application.self-c3677990e8391690a0928978b96e671aefbfeab2d3d0cc985419a5ca3a789f90.css?body=1" for 127.0.0.1 at 2016-07-25 16:53:59 -0400
+
+
+Started GET "/assets/mapbox.self-10624cd2edcc6adf3f022eb3237e22a0075a357fac916a4dc9e1eee40b29efff.css?body=1" for 127.0.0.1 at 2016-07-25 16:53:59 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-25 16:53:59 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-25 16:53:59 -0400
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-07-25 16:53:59 -0400
+
+
+Started GET "/assets/MovingMarker.self-55b93b039b582fad17de7995f910cbbd10ee9abca9d9db0401d15be483c87bc0.js?body=1" for 127.0.0.1 at 2016-07-25 16:53:59 -0400
+
+
+Started GET "/assets/npm-rails/development/npm-dependencies.self-f469c6a162ce951bd6b15cac8825345003e22f04643d5811901e0113697e9abe.js?body=1" for 127.0.0.1 at 2016-07-25 16:53:59 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-07-25 16:53:59 -0400
+
+
+Started GET "/assets/users.self-f8ef36cadd235f37ec9074317d2f94f23f865698277700e52a8c7d92b4a1aa69.js?body=1" for 127.0.0.1 at 2016-07-25 16:53:59 -0400
+
+
+Started GET "/token" for 127.0.0.1 at 2016-07-25 16:56:41 -0400
+Processing by UsersController#get_token as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from get_token at /home/loldlm/Academia-hack/proyecto_final/NeighbourIntraffic/app/controllers/users_controller.rb:6)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "token" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["token", "b33badaaf17539a81e52615dd490af6a122b80f5"], ["updated_at", "2016-07-25 20:56:42.795218"], ["id", 2]]
+  [1m[36m (163.3ms)[0m  [1mcommit transaction[0m
+  Rendered users/get_token.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 1395ms (Views: 248.7ms | ActiveRecord: 164.6ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-25 16:56:43 -0400
+
+
+Started GET "/assets/application.self-c3677990e8391690a0928978b96e671aefbfeab2d3d0cc985419a5ca3a789f90.css?body=1" for 127.0.0.1 at 2016-07-25 16:56:43 -0400
+
+
+Started GET "/assets/leaflet.self-c586f9a074399d87ecfe9b87e819f86390348631bc17b52f09bca64dcc315f71.css?body=1" for 127.0.0.1 at 2016-07-25 16:56:43 -0400
+
+
+Started GET "/assets/mapbox.self-10624cd2edcc6adf3f022eb3237e22a0075a357fac916a4dc9e1eee40b29efff.css?body=1" for 127.0.0.1 at 2016-07-25 16:56:43 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-25 16:56:43 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-25 16:56:43 -0400
+
+
+Started GET "/assets/npm-rails/development/npm-dependencies.self-f469c6a162ce951bd6b15cac8825345003e22f04643d5811901e0113697e9abe.js?body=1" for 127.0.0.1 at 2016-07-25 16:56:43 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-07-25 16:56:43 -0400
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-07-25 16:56:43 -0400
+
+
+Started GET "/assets/MovingMarker.self-55b93b039b582fad17de7995f910cbbd10ee9abca9d9db0401d15be483c87bc0.js?body=1" for 127.0.0.1 at 2016-07-25 16:56:43 -0400
+
+
+Started GET "/assets/users.self-831bd36139ef78436eb8091bb808faeb942d4d03279081f4fc5ff887921255f6.js?body=1" for 127.0.0.1 at 2016-07-25 16:56:43 -0400
+
+
+Started GET "/token" for 127.0.0.1 at 2016-07-25 16:57:44 -0400
+Processing by UsersController#get_token as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from get_token at /home/loldlm/Academia-hack/proyecto_final/NeighbourIntraffic/app/controllers/users_controller.rb:6)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["token", "74db81c9654b5ba5b0e471136346c970e111ae45"], ["updated_at", "2016-07-25 20:57:45.648186"], ["id", 2]]
+  [1m[35m (153.5ms)[0m  commit transaction
+  Rendered users/get_token.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1255ms (Views: 125.4ms | ActiveRecord: 154.8ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-25 16:57:46 -0400
+
+
+Started GET "/assets/application.self-c3677990e8391690a0928978b96e671aefbfeab2d3d0cc985419a5ca3a789f90.css?body=1" for 127.0.0.1 at 2016-07-25 16:57:46 -0400
+
+
+Started GET "/assets/leaflet.self-c586f9a074399d87ecfe9b87e819f86390348631bc17b52f09bca64dcc315f71.css?body=1" for 127.0.0.1 at 2016-07-25 16:57:46 -0400
+
+
+Started GET "/assets/mapbox.self-10624cd2edcc6adf3f022eb3237e22a0075a357fac916a4dc9e1eee40b29efff.css?body=1" for 127.0.0.1 at 2016-07-25 16:57:46 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-25 16:57:46 -0400
+
+
+Started GET "/assets/npm-rails/development/npm-dependencies.self-f469c6a162ce951bd6b15cac8825345003e22f04643d5811901e0113697e9abe.js?body=1" for 127.0.0.1 at 2016-07-25 16:57:46 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-25 16:57:46 -0400
+
+
+Started GET "/assets/MovingMarker.self-55b93b039b582fad17de7995f910cbbd10ee9abca9d9db0401d15be483c87bc0.js?body=1" for 127.0.0.1 at 2016-07-25 16:57:46 -0400
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-07-25 16:57:46 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-07-25 16:57:46 -0400
+
+
+Started GET "/assets/users.self-49847326379b8760ee28f79985678e8250fe388ee381dfced54fe3780822a81b.js?body=1" for 127.0.0.1 at 2016-07-25 16:57:46 -0400
+
+
+Started GET "/token" for 127.0.0.1 at 2016-07-25 16:58:06 -0400
+Processing by UsersController#get_token as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from get_token at /home/loldlm/Academia-hack/proyecto_final/NeighbourIntraffic/app/controllers/users_controller.rb:6)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "users" SET "token" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["token", "384506037996283b9d9c24b5e5e417af141aeda8"], ["updated_at", "2016-07-25 20:58:08.122306"], ["id", 2]]
+  [1m[36m (121.5ms)[0m  [1mcommit transaction[0m
+  Rendered users/get_token.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1725ms (Views: 112.0ms | ActiveRecord: 122.8ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-25 16:58:08 -0400
+
+
+Started GET "/assets/application.self-c3677990e8391690a0928978b96e671aefbfeab2d3d0cc985419a5ca3a789f90.css?body=1" for 127.0.0.1 at 2016-07-25 16:58:08 -0400
+
+
+Started GET "/assets/leaflet.self-c586f9a074399d87ecfe9b87e819f86390348631bc17b52f09bca64dcc315f71.css?body=1" for 127.0.0.1 at 2016-07-25 16:58:08 -0400
+
+
+Started GET "/assets/mapbox.self-10624cd2edcc6adf3f022eb3237e22a0075a357fac916a4dc9e1eee40b29efff.css?body=1" for 127.0.0.1 at 2016-07-25 16:58:08 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-25 16:58:08 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-25 16:58:08 -0400
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-07-25 16:58:08 -0400
+
+
+Started GET "/assets/npm-rails/development/npm-dependencies.self-f469c6a162ce951bd6b15cac8825345003e22f04643d5811901e0113697e9abe.js?body=1" for 127.0.0.1 at 2016-07-25 16:58:08 -0400
+
+
+Started GET "/assets/MovingMarker.self-55b93b039b582fad17de7995f910cbbd10ee9abca9d9db0401d15be483c87bc0.js?body=1" for 127.0.0.1 at 2016-07-25 16:58:08 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-07-25 16:58:08 -0400
+
+
+Started GET "/assets/users.self-b62115d651fe57074bf1f4c5fc7dbc4ebe3bfc4d5cb165d13ecfa6d44144fa2c.js?body=1" for 127.0.0.1 at 2016-07-25 16:58:08 -0400
+
+
+Started GET "/token" for 127.0.0.1 at 2016-07-25 17:00:54 -0400
+Processing by UsersController#get_token as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from get_token at /home/loldlm/Academia-hack/proyecto_final/NeighbourIntraffic/app/controllers/users_controller.rb:6)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.3ms)[0m  [1mUPDATE "users" SET "token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["token", "cec78d8480520a4cf063f0d8c034362438af3367"], ["updated_at", "2016-07-25 21:00:55.757328"], ["id", 2]]
+  [1m[35m (117.2ms)[0m  commit transaction
+  Rendered users/get_token.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 1126ms (Views: 155.6ms | ActiveRecord: 119.5ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-07-25 17:00:56 -0400
+
+
+Started GET "/assets/application.self-c3677990e8391690a0928978b96e671aefbfeab2d3d0cc985419a5ca3a789f90.css?body=1" for 127.0.0.1 at 2016-07-25 17:00:56 -0400
+
+
+Started GET "/assets/leaflet.self-c586f9a074399d87ecfe9b87e819f86390348631bc17b52f09bca64dcc315f71.css?body=1" for 127.0.0.1 at 2016-07-25 17:00:56 -0400
+
+
+Started GET "/assets/mapbox.self-10624cd2edcc6adf3f022eb3237e22a0075a357fac916a4dc9e1eee40b29efff.css?body=1" for 127.0.0.1 at 2016-07-25 17:00:56 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-25 17:00:56 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-25 17:00:56 -0400
+
+
+Started GET "/assets/npm-rails/development/npm-dependencies.self-f469c6a162ce951bd6b15cac8825345003e22f04643d5811901e0113697e9abe.js?body=1" for 127.0.0.1 at 2016-07-25 17:00:56 -0400
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-07-25 17:00:56 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-07-25 17:00:56 -0400
+
+
+Started GET "/assets/users.self-3b546b10ba743a3df44b279792bb6dd0d306aa41d4830ba5bd76ad997a6682af.js?body=1" for 127.0.0.1 at 2016-07-25 17:00:56 -0400
+
+
+Started GET "/assets/MovingMarker.self-55b93b039b582fad17de7995f910cbbd10ee9abca9d9db0401d15be483c87bc0.js?body=1" for 127.0.0.1 at 2016-07-25 17:00:56 -0400

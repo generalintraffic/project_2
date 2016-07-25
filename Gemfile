@@ -9,6 +9,9 @@ gem 'json', '~> 1.8', '>= 1.8.3'
 gem 'npm-rails'
 gem 'leaflet-rails'
 gem 'mapbox-rails'
+gem 'babel-source' , '~> 5.8.35'
+gem 'babel-transpiler','~>0.7.0'
+
 # ************************* #
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

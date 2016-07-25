@@ -6,6 +6,9 @@ gem 'rest-client', '~> 1.8'
 gem 'devise', '~> 4.2'
 gem 'better_errors', '~> 2.1', '>= 2.1.1'
 gem 'json', '~> 1.8', '>= 1.8.3'
+gem 'npm-rails'
+gem 'leaflet-rails'
+gem 'mapbox-rails'
 # ************************* #
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

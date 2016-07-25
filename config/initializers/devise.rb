@@ -7,7 +7,11 @@ Devise.setup do |config|
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
   # config.secret_key = '7af53728a249bbd52d6dbefc2483afe18477055c6607f366f759a85841dfdca0354c24834717b6552e70bc690be9d9542fddfe2dec66fa4be7caf2df3dc435e1'
-
+  
+  # Configuracion de Devise para aceptar peticiones JSON
+  config.http_authenticatable_on_xhr = false
+  config.navigational_formats = ["*/*", :html, :json]
+  
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class

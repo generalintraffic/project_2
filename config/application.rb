@@ -16,6 +16,8 @@ module NeighbourTraffic
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
     # config.time_zone = 'Central Time (US & Canada)'
 
+    # Configuracion Rails para permitir Peticiones AJAX como intermediario
+    # entre el Api de InTraffic y un servidor distinto (CORS segun tengo entendido)
     config.action_dispatch.default_headers.merge!({
       'Access-Control-Allow-Origin' => '*',
       'Access-Control-Request-Method' => '*'

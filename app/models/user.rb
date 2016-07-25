@@ -47,4 +47,24 @@ class User < ActiveRecord::Base
     return JSON.parse(routesPublic)
   end
 
+  def radioTraffic(token, pointRadio)
+    url = 'https://api.intraffic.com.ve/links/in_circle.geojson'
+    params = CGI.unescape({'point' => pointRadio[:point][0], 'radio' => pointRadio[:radio][0]}.to_query)
+    uri = URI([url, params].join("?"))
+    
+    https = Net::HTTP.new(uri.host,uri.port)
+    https.use_ssl = true
+    https.verify_mode = OpenSSL::SSL::VERIFY_NONE
+    
+    req = https.get(uri, {
+      "user-agent" => "develop",
+      "authorization" => "Bearer " + token,
+      "cache-control" => "no-cache"
+    })
+
+    radioTraffic = req.read_body
+    
+    return JSON.parse(radioTraffic)
+  end
+
 end

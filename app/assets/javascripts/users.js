@@ -210,7 +210,6 @@ function end(fc,geojson){
 function movie(fc, featureLayer){
   // var fc = fc;
   // var c = c;
-  $("#map").unbind("click");
 
   featureLayer.setGeoJSON(geojson);
   var coord1=[[10.50387,-66.90679,],[10.50504,-66.90656,],[10.50504,-66.90656,],

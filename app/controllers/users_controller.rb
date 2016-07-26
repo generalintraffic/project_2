@@ -1,9 +1,11 @@
 class UsersController < ApplicationController
   
+
   before_action :authenticate_user!
 
   def get_token
     @user = User.find(current_user.id)
+
     @user.token = @user.uriToken[:access_token]
     @user.save
     respond_to do |format|

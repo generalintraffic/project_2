@@ -18,35 +18,36 @@ var map = L.mapbox.map('map', 'mapbox.streets', {
 // map.fitBounds(countriesLayer.getBounds());
 
 
+
 // obeneter coordenadas del GeoJson
-var geo = GeojsonCoords(routing);
-for (var i in geo) {
-  var index = geo[i][0]
-  geo[i][0] = geo[i][1]
-  geo[i][1] = index
-}
+// var geo = GeojsonCoords(routing);
+// for (var i in geo) {
+//   var index = geo[i][0]
+//   geo[i][0] = geo[i][1]
+//   geo[i][1] = index
+// }
 
-console.log(geo)
-var radius = [];
+// console.log(geo)
+// var radius = [];
 
-var marker2 = L.Marker.movingMarker(geo,
-    30000, {autostart: true}).addTo(map);
-radioTraffic = setInterval(() => {
-  radius.push(L.circle([marker2._currentLine[0].lat, marker2._currentLine[0].lng], 300).addTo(map))
-  console.log(radius)
-  if (count++ >= 2) {
-    reloadCircle(radius[count-3]);
-  }
-}, 5000);
-setTimeout(() => {clearInterval(radioTraffic), console.log('end')}, 31000);
+// var marker2 = L.Marker.movingMarker(geo,
+//     30000, {autostart: true}).addTo(map);
+// radioTraffic = setInterval(() => {
+//   radius.push(L.circle([marker2._currentLine[0].lat, marker2._currentLine[0].lng], 300).addTo(map))
+//   console.log(radius)
+//   if (count++ >= 2) {
+//     reloadCircle(radius[count-3]);
+//   }
+// }, 5000);
+// setTimeout(() => {clearInterval(radioTraffic), console.log('end')}, 31000);
 
-var reloadCircle = (radius) => {
-  if (radius) {
-    map.removeLayer(radius)
-  } else {
-    console.log('error')
-  }
-}
+// var reloadCircle = (radius) => {
+//   if (radius) {
+//     map.removeLayer(radius)
+//   } else {
+//     console.log('error')
+//   }
+// }
 
 // Pintando geojson del Api 
 // var countriesLayer = L.geoJson(routing).addTo(map);
@@ -100,7 +101,8 @@ function myFunction() {
     // origin[0] = origin[1];
     // origin[1] = b;
     change(origin);
-    coord.push(origin);
+    
+    coord.push(origin.toString());
     console.log(coord);
 
   } else {
@@ -194,7 +196,7 @@ function end(fc,geojson){
               if (confirm("Do you wish to continue?") == true) {
                 
                 change(final);
-                coord.push(final);
+                coord.push(final.toString());
                 console.log(coord);
                 text();               
               } else {

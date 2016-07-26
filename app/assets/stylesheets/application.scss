@@ -18,3 +18,47 @@ body {
   width:100%;
   
 }
+
+#direction {
+    z-index: 99;
+    background: rgba(0,0,0,.8);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    position: absolute;
+    width: 223px;
+}
+
+pre.ui-distance {
+  position:absolute;
+  bottom:10px;
+  left:10px;
+  padding:5px 10px;
+  background:rgba(0,0,0,0.5);
+  color:#fff;
+  font-size:11px;
+  line-height:18px;
+  border-radius:3px;
+  }
+
+  
+#button-wrapper {
+  position:absolute;
+  bottom:5%;
+  right:16px;
+  padding:5px 10px;
+  background:rgba(0,0,0,0.5);
+  color:#fff;
+  font-size:11px;
+  line-height:18px;
+  border-radius:3px;
+  }
+
+span.glyphicon.glyphicon-off.td{
+
+top:13px;
+font-size: 25px;
+left: 80px;
+
+}

@@ -1,9 +1,9 @@
 class UsersController < ApplicationController
   
-  # before_action :authenticate_user!
+  before_action :authenticate_user!
 
   def get_token
-    @user = User.find(current_user)
+    @user = User.find(current_user.id)
     @user.token = @user.uriToken[:access_token]
     @user.save
     respond_to do |format|
@@ -36,10 +36,20 @@ class UsersController < ApplicationController
     end
   end
 
+  helper_method :guest_user
+
+  def guest_user
+    u = User.create(:name => "guest", :email => "guest_#{Time.now.to_i}#{rand(100)}@example.com", :password => "guest_#{Time.now.to_i}#{rand(100)}")
+    if u.save
+      redirect_to {token_path}
+    end
+  end
+
   private
 
   def params_user
     pramas.require(:user).permit(:token)
   end
+
 
 end

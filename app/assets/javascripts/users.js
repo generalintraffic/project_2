@@ -8,6 +8,7 @@ var map = L.mapbox.map('map', 'mapbox.streets', {
 }).setView([10.488824641652126,-66.87480926513672], 14);
   
 // Pintando titulos del Mapa
+/*
 var tileUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
   layer = new L.TileLayer(tileUrl,
     {
@@ -16,7 +17,7 @@ var tileUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
     });
 
 map.addLayer(layer);
-
+*/
 // obeneter coordenadas del GeoJson
 // var geo = GeojsonCoords(routing);
 // console.log(geo)

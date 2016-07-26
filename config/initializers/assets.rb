@@ -4,6 +4,9 @@
 Rails.application.config.assets.version = '1.0'
 
 Rails.application.config.assets.precompile += %w( users.js )
+Rails.application.config.assets.precompile += %w( jquery )
+Rails.application.config.assets.precompile += %w( bootstrap-sprockets )
+Rails.application.config.assets.precompile += %w( turbolinks )
 
 
 # Add additional assets to the asset load path

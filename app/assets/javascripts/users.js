@@ -1,6 +1,7 @@
 // require 'babel/transpiler'
 
 
+
 // Pintando el mapa Mapbox
 L.mapbox.accessToken = 'pk.eyJ1IjoiamVuYWxlYnJlcmEiLCJhIjoiY2lxdGRiNjNvMDA0OGZ4bmhpem5vNW04aSJ9.KtxaiY3UMU55gYgTv-34uw';
 var map = L.mapbox.map('map', 'mapbox.streets', {

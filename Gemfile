@@ -9,6 +9,7 @@ gem 'json', '~> 1.8', '>= 1.8.3'
 gem 'npm-rails'
 gem 'leaflet-rails'
 gem 'mapbox-rails'
+gem 'bootstrap-sass', '~> 3.3.6'
 gem 'babel-source' , '~> 5.8.35'
 gem 'babel-transpiler','~>0.7.0'
 

@@ -1,7 +1,3 @@
-// require 'babel/transpiler'
-
-
-
 // Pintando el mapa Mapbox
 L.mapbox.accessToken = 'pk.eyJ1IjoiamVuYWxlYnJlcmEiLCJhIjoiY2lxdGRiNjNvMDA0OGZ4bmhpem5vNW04aSJ9.KtxaiY3UMU55gYgTv-34uw';
 var map = L.mapbox.map('map', 'mapbox.streets', {
@@ -18,9 +14,39 @@ var map = L.mapbox.map('map', 'mapbox.streets', {
 
 // map.addLayer(layer);
 
+// var countriesLayer = L.geoJson(routing).addTo(map);
+// map.fitBounds(countriesLayer.getBounds());
+
+
 // obeneter coordenadas del GeoJson
-// var geo = GeojsonCoords(routing);
-// console.log(geo)
+var geo = GeojsonCoords(routing);
+for (var i in geo) {
+  var index = geo[i][0]
+  geo[i][0] = geo[i][1]
+  geo[i][1] = index
+}
+
+console.log(geo)
+var radius = [];
+
+var marker2 = L.Marker.movingMarker(geo,
+    30000, {autostart: true}).addTo(map);
+radioTraffic = setInterval(() => {
+  radius.push(L.circle([marker2._currentLine[0].lat, marker2._currentLine[0].lng], 300).addTo(map))
+  console.log(radius)
+  if (count++ >= 2) {
+    reloadCircle(radius[count-3]);
+  }
+}, 5000);
+setTimeout(() => {clearInterval(radioTraffic), console.log('end')}, 31000);
+
+var reloadCircle = (radius) => {
+  if (radius) {
+    map.removeLayer(radius)
+  } else {
+    console.log('error')
+  }
+}
 
 // Pintando geojson del Api 
 // var countriesLayer = L.geoJson(routing).addTo(map);

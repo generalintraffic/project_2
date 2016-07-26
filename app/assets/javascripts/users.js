@@ -101,7 +101,8 @@ function myFunction() {
     // origin[0] = origin[1];
     // origin[1] = b;
     change(origin);
-    coord.push(origin);
+    
+    coord.push(origin.toString());
     console.log(coord);
 
   } else {
@@ -195,7 +196,7 @@ function end(fc,geojson){
               if (confirm("Do you wish to continue?") == true) {
                 
                 change(final);
-                coord.push(final);
+                coord.push(final.toString());
                 console.log(coord);
                 text();               
               } else {

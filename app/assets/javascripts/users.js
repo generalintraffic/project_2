@@ -18,6 +18,7 @@ var map = L.mapbox.map('map', 'mapbox.streets', {
 // map.fitBounds(countriesLayer.getBounds());
 
 
+
 // obeneter coordenadas del GeoJson
 // var geo = GeojsonCoords(routing);
 // for (var i in geo) {

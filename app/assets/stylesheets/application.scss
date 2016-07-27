@@ -27,32 +27,39 @@ body {
     bottom: 0;
     overflow: auto;
     position: absolute;
-    width: 223px;
+    width: 225px;
 }
 
 pre.ui-distance {
   position:absolute;
-  bottom:10px;
-  left:10px;
+  bottom:33px;
+  right:4px;
   padding:5px 10px;
-  background:rgba(0,0,0,0.5);
   color:#fff;
   font-size:11px;
   line-height:18px;
   border-radius:3px;
+  background: none;
+  border:none;  
+  z-index: 999;
+  width: 16%;
+  padding: 1px;
   }
 
   
 #button-wrapper {
   position:absolute;
-  bottom:5%;
-  right:20%;
+  bottom:20px;
+  right: 4px;
+  z-index: 999;
   padding:5px 10px;
-  background:rgba(0,0,0,0.5);
   color:#fff;
   font-size:11px;
   line-height:18px;
   border-radius:3px;
+  z-index: 999;
+  width: 16%;
+  padding: 1px;
   }
 
 span.glyphicon.glyphicon-off.td{
@@ -61,4 +68,15 @@ top:13px;
 font-size: 25px;
 left: 80px;
 
+}
+
+.table-info{
+  position: absolute;
+  color:#3d3d3d;
+  left: 22px;
+  top:60px;
+  background: #ffffff;
+  width: 180px;
+  border-radius: 5px;
+  padding: 10px;
 }

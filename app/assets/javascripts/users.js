@@ -3,7 +3,7 @@ L.mapbox.accessToken = 'pk.eyJ1IjoiamVuYWxlYnJlcmEiLCJhIjoiY2lxdGRiNjNvMDA0OGZ4b
 var map = L.mapbox.map('map', 'mapbox.streets', {
   zoomControl: true
 }).setView([10.488824641652126,-66.87480926513672], 14);
-  
+  /*
 // Pintando titulos del Mapa
 // var tileUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 //   layer = new L.TileLayer(tileUrl,
@@ -16,9 +16,6 @@ var map = L.mapbox.map('map', 'mapbox.streets', {
 
 // var countriesLayer = L.geoJson(routing).addTo(map);
 // map.fitBounds(countriesLayer.getBounds());
-
-
-
 // obeneter coordenadas del GeoJson
 // var geo = GeojsonCoords(routing);
 // for (var i in geo) {
@@ -56,7 +53,7 @@ var map = L.mapbox.map('map', 'mapbox.streets', {
 // **** Inicio de Animacion global **** //
 
 // Obtener punto de origen 
-
+*/
 init();
 var c, fixedMarker, count = true, x = true, origin = [], coord= [], geojson;
 
@@ -169,6 +166,7 @@ function destination(fc,featureLayer){
         "properties": {
           "marker-color": "#ff8888"
         }
+
       }, {
         "type": "Feature",
         "geometry": {
@@ -186,15 +184,15 @@ function destination(fc,featureLayer){
       }
     ];
 
-    featureLayer.setGeoJSON(geojson);
-    
-    
-    // Finally, print the distance between these two points
-    // on the screen using distanceTo().
-    var container = document.getElementById('distance');
-    container.innerHTML = (fc.distanceTo(c)).toFixed(0) + 'm';
-    end(fc,geojson,final);
-  })
+     featureLayer.setGeoJSON(geojson);
+      
+      
+      // Finally, print the distance between these two points
+      // on the screen using distanceTo().
+      var container = document.getElementById('meters');
+      container.innerHTML = (fc.distanceTo(c)).toFixed(0) + 'm';
+      end(fc,geojson,final);
+  });
 
 };
 
@@ -202,7 +200,7 @@ function end(fc,geojson){
 
   if (!count){
     $("#button-wrapper").append(
-          $('<button>',{id:"input",type:"button"}).html('Final Destination').click(function(){
+          $('<button>',{class:"btn btn-primary btn-md btn-block",type:"button"}).html('Establecer como Destino').click(function(){
               map.off("click");
               if (confirm("Do you wish to continue?") == true) {
                 change(final);

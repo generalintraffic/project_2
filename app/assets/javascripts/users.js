@@ -76,6 +76,7 @@ function init(){
       }
   });
 };
+
 // coloca el marker y el radio en el punto de origen
 function coordinates(){
   var start = L.icon({

@@ -81,15 +81,22 @@ function init(){
 };
 // coloca el marker y el radio en el punto de origen
 function coordinates(){
-   fixedMarker = L.marker(new L.LatLng(origin[0],origin[1]), {
-    icon: L.mapbox.marker.icon({
-      'marker-color': 'ff8888'
-    })
-  }).bindPopup('Punto de Origen').addTo(map);
+  var start = L.icon({
+      iconUrl: 'assets/market.png',
+      iconSize: [40, 40],
+       });
+  fixedMarker = L.marker(new L.LatLng(origin[0],origin[1]),{
+  icon:start,draggable:true,title:'origen'})
+  .bindPopup('Punto de Origen').addTo(map);
   fixedCircle = L.circle(origin, 300).addTo(map)
+
   console.log(origin);
   return fixedMarker;
 };
+
+
+
+
 
 function myFunction() {
   
@@ -124,66 +131,70 @@ function text(){
   var fc = fixedMarker.getLatLng();
   
   // Create a featureLayer that will hold a marker and linestring.
-  var featureLayer = L.mapbox.featureLayer().addTo(map);
+  
   if(x){
-    
+    var featureLayer = L.mapbox.featureLayer().addTo(map);
     destination(fc, featureLayer);
     console.log('si');
     x = false;
   }
   else if(!x){
     console.log('false');
+    var flag = L.icon({
+      iconUrl: 'assets/flag.png',
+      iconSize: [40, 50],
+       });
+    marker = L.marker(c,{icon:flag,title:'destino'}).addTo(map);
     movie(fc, featureLayer);
     }
   
 };
 
+
+ 
 function destination(fc,featureLayer){
-  console.log(fc + ' ' + featureLayer);
   
-    map.on('click', function (ev) {
-      // ev.latlng gives us the coordinates of
-      // the spot clicked on the map.
+ 
+  map.on('click', function (ev) {
+    c = ev.latlng;
+    final = [ev.latlng.lat, ev.latlng.lng];
+    geojson = [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [c.lng, c.lat]
 
-      c = ev.latlng;
-      final = [ev.latlng.lat, ev.latlng.lng];
-      geojson = [
-        {
-          "type": "Feature",
-          "geometry": {
-            "type": "Point",
-            "coordinates": [c.lng, c.lat]
-
-          },
-          "properties": {
-            "marker-color": "#ff8888"
-          }
-        }, {
-          "type": "Feature",
-          "geometry": {
-            "type": "LineString",
-            "coordinates": [
-              [fc.lng, fc.lat],
-              [c.lng, c.lat]
-            ]
-          },
-          "properties": {
-            "stroke": "#000",
-            "stroke-opacity": 0.5,
-            "stroke-width": 4
-          }
+        },
+        "properties": {
+          "marker-color": "#ff8888"
         }
-      ];
+      }, {
+        "type": "Feature",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [fc.lng, fc.lat],
+            [c.lng, c.lat]
+          ]
+        },
+        "properties": {
+          "stroke": "#000",
+          "stroke-opacity": 0.5,
+          "stroke-width": 4
+        }
+      }
+    ];
 
-      featureLayer.setGeoJSON(geojson);
-      
-      
-      // Finally, print the distance between these two points
-      // on the screen using distanceTo().
-      var container = document.getElementById('distance');
-      container.innerHTML = (fc.distanceTo(c)).toFixed(0) + 'm';
-      end(fc,geojson,final);
-  });
+    featureLayer.setGeoJSON(geojson);
+    
+    
+    // Finally, print the distance between these two points
+    // on the screen using distanceTo().
+    var container = document.getElementById('distance');
+    container.innerHTML = (fc.distanceTo(c)).toFixed(0) + 'm';
+    end(fc,geojson,final);
+  })
 
 };
 
@@ -194,10 +205,10 @@ function end(fc,geojson){
           $('<button>',{id:"input",type:"button"}).html('Final Destination').click(function(){
               map.off("click");
               if (confirm("Do you wish to continue?") == true) {
-                
                 change(final);
                 coord.push(final.toString());
                 console.log(coord);
+
                 text();               
               } else {
                 end();

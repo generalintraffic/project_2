@@ -15,14 +15,14 @@ class UsersController < ApplicationController
   end
 
   def neighbour_traffic
-    @user = User.find(1)
+    @user = User.find(current_user.id)
     point_radio = params[:coordinates]
     respond = @user.radioTraffic(@user.token, point_radio)
     render json: respond
   end
 
   def dataPointers
-    @user = User.find(current_user)
+    @user = User.find(current_user.id)
     pointers = params[:coordinates]
     respond = @user.publicRoutes(@user.token, pointers)
     if respond.kind_of?(Array)

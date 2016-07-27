@@ -49,7 +49,7 @@ class User < ActiveRecord::Base
 
   def radioTraffic(token, pointRadio)
     url = 'http://intraffic.duckdns.org:8096/links/in_circle.geojson'
-    params = CGI.unescape({'point' => pointRadio[:point][0], 'radio' => pointRadio[:radio][0]}.to_query)
+    params = CGI.unescape({'point' => pointRadio[:pointRadio][0], 'radio' => pointRadio[:pointRadio][1]}.to_query)
     uri = URI([url, params].join("?"))
     
     https = Net::HTTP.new(uri.host,uri.port)

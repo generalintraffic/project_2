@@ -46,7 +46,7 @@ function coordinates(){
       iconSize: [40, 40]
     })
   }).bindPopup('Punto de Origen').addTo(map);
-  fixedCircle = L.circle(origin, 300).addTo(map)
+  fixedCircle = L.circle(origin, 300, {color: "rgba(158, 158, 158, 0.53)"}).addTo(map)
   console.log(origin, true);
   change(origin, true);
 };
@@ -59,19 +59,19 @@ function change(points, Porigin = false) {
   points[0] = points[1];
   points[1] = index;
   if (Porigin == true) {
-    radioTraffic();
+    radioTraffic(points);
   }
 };
 
 // Ajax que obtiene el trafico del Radio
 
-radioTraffic = () => {
+radioTraffic = (points) => {
   $.ajax({
     url:'http://localhost:3000/neighbour',
     method:"POST",
     dataType:"json",
     data: {coordinates: 
-      {pointRadio: [origin.toString(),'0.002']}
+      {pointRadio: [points.toString(),'0.002']}
     },
     success: (data) => {
       if (data.error) {
@@ -79,11 +79,29 @@ radioTraffic = () => {
       } else {
         console.log(data)
         if (radioChek == true) {
-          radioLayer = L.geoJson(data).addTo(map);
+          radioLayer = L.geoJson(data, {
+            style: (feature) => {
+              switch (feature.properties.rt_traffic_status) {
+                case 1: return {color: "#84ca50"}
+                case 2: return {color: "#f07d02"}
+                case 3: return {color: "#e60000"}
+                case 4: return {color: "#9e1313"}
+              }
+            }
+          }).addTo(map);
           map.fitBounds(radioLayer.getBounds());
         } else {
           map.removeLayer(radioLayer)
-          radioLayer = L.geoJson(data).addTo(map);
+          radioLayer = L.geoJson(data, {
+            style: (feature) => {
+              switch (feature.properties.rt_traffic_status) {
+                case 1: return {color: "#84ca50"}
+                case 2: return {color: "#f07d02"}
+                case 3: return {color: "#e60000"}
+                case 4: return {color: "#9e1313"}
+              }
+            }
+          }).addTo(map);
           map.fitBounds(radioLayer.getBounds());
         }
         radioChek = false;
@@ -94,7 +112,6 @@ radioTraffic = () => {
     }  
   });
 }
-
 
 // Recarga el token para su nuevo uso
 
@@ -114,7 +131,6 @@ getToken = (check) => {
     }  
   });
 }
-
 
 // Boton para confirmar Punto A
 
@@ -178,8 +194,8 @@ function end(){
           end();
         }
       })
-      );
-    count=true;
+    );
+  count=true;
   }
 };
 
@@ -209,7 +225,6 @@ routing = () => {
 // Pintando el GeoJson en el Mapa
 
 printingTrack = (data) => {
-  console.log(data)
   trackLayer = L.geoJson(data).addTo(map);
   map.fitBounds(trackLayer.getBounds());
   if (data) {
@@ -235,18 +250,22 @@ animation = () => {
   marker2 = L.Marker.movingMarker(dataCoord,
       30000, {autostart: true}).addTo(map);
   radioAnimationTraffic = setInterval(() => {
-    radius.push(L.circle([marker2._currentLine[0].lat, marker2._currentLine[0].lng], 300).addTo(map))
-    if (aCount++ > 0) {
+    radius.push(L.circle([marker2._currentLine[0].lat, marker2._currentLine[0].lng], 300, {color: "rgba(158, 158, 158, 0.53)"}).addTo(map))
+    radioAjax = [marker2._currentLine[0].lat, marker2._currentLine[0].lng]
+    change(radioAjax, true)
+    console.log(radius)
+    if (aCount++ >= 0) {
       map.removeLayer(fixedCircle);
       reloadCircle(radius[aCount-2]);
     }
-  }, 10);
+  }, 5000);
   setTimeout(() => {clearInterval(radioAnimationTraffic), console.log('end')}, 31000);
   reloadCircle = (radius) => {
     if (radius) {
+      map.removeLayer(radioLayer)
       map.removeLayer(radius)
     } else {
-      console.log('error')
+      console.log('this not :)')
     }
   }
 }
@@ -272,6 +291,5 @@ restart = () => {
     aCount = 0, marker2 = null,
     trackLayer = null, radioLayer = null,
     radioChek = true;
-  selectedPoint();
   init();
 }

@@ -4,32 +4,44 @@
 
 <div id="direction">
 	<% if user_signed_in? %>
-    <li>
-      <a href="/users/sign_out" data-method = "delete" data-toggle="tooltip" data-placement="botton" title="Cerrar Sesion">
-        <span class="glyphicon glyphicon-off td"></span>
-      </a>
-    </li>
+  <li>
+    <a href="/users/sign_out" data-method = "delete" data-toggle="tooltip" data-placement="botton" title="Cerrar Sesion">
+      <span class="glyphicon glyphicon-off td"></span>
+    </a>
+  </li>
   <% else %>
-    <li>
-      <a href="/users/sign_in" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
-        <span class="glyphicon glyphicon-off td"></span>
-      </a>
-    </li>
+  <li>
+    <a href="/users/sign_in" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+      <span class="glyphicon glyphicon-off td"></span>
+    </a>
+  </li>
   <% end %>
   <div class="table-info text-center">
     <dl>
-      <dt></dt>
-      <dd>
-        <button class="btn-success" id="restart">
-        Resetear puntos
-        </button> 
+      <dt id="sms"></dt>
+      <dd id="loading">
       </dd>
     </dl>
   </div>
 
-  <div id="sms">
-      
+  <div class="legend">
+    <div class="sms-legend">
+      <h5>Trafico en directo</h5>
+    </div>
+    <div class="quick">
+    <h5>Rápido</h5>
+    </div>
+    <div class="img-legend">
+      <%=image_tag "leyenda.png", :alt => "#" , :title => "#"%>
+    </div>
+    <div class="slow">
+    <h5>Lento</h5>
+    </div>
+
+
+
   </div>
+
 
   <div id= "distance" class="container-semaforo">
     <div id="box-out">
@@ -38,10 +50,18 @@
           <div id="circulo3" class="color3"></div>
         </button>
         <button type="button"  class="btn btn-primary tf" data-toggle="tooltip" data-placement="botton" title="Establecer como Destino">
-          <div id="circulo2" class="color2"></div>
+          <div id="circulo1" class="color1">
+          </div>
         </button>
-        <div id="circulo1" class="color1">
+
+        <div id="circulo2" class="color2">
+          <button class="btn btn-warning ta" id="restart">
+            Restart
+          </button> 
+          
+        </div>
+        
+        
       </div>
     </div>
   </div>
-</div>

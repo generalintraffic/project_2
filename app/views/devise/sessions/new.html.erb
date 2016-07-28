@@ -1,6 +1,48 @@
 
 <nav class="navbar navbar-default">
+<div class="container">
+  <div class= row>
+    <div class="col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3</div>
+    <div class="col-md-3 col-md-offset-3">
+    
+      <ul id="fat-menu" class=" log-button  dropdown">Log In
+        <a href="#" class="dropdown-toggle" id="drop3" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> 
+          <span class="caret"></span>
+        </a> 
+        <ul class="log-menu dropdown-menu " aria-labelledby="drop3"> 
+          <li>
+            <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <div class="log ">
+              <%= f.email_field :email, autofocus: true,class: 'form-group', placeholder: "Enter Email" %>
+             
+            </div>
 
+            <div class="log ">
+              <%= f.password_field :password, autocomplete: "off",class: 'form-group', placeholder: "Password" %>
+            </div>
+
+            <% if devise_mapping.rememberable? -%>
+            <div class="log ">
+              <%= f.check_box :remember_me %>
+              <%= f.label :remember_me %>
+            </div>
+            <% end -%>
+
+            <div class="log actions">
+              <%= f.submit "Log in",class: 'form-group' %>
+            </div>
+            <% end %>
+            <div class="log-message" data-toggle="modal" data-target=".bs-example-modal-sm">
+            <%= render "devise/shared/links" %>
+            
+            </div>
+          </li>
+        </ul> 
+      </ul>
+   
+    </div>
+  </div>
+</div>
 </nav>
 
 
@@ -31,22 +73,14 @@
       </div>
 
 
-
-
-
     </div>
 
-
-    <div class="col-md-6">
+  <div class="col-md-6">
       <h1>Obtén la mejor ruta, todos los días,
 con la ayuda en tiempo real de otros conductores.</h1>
 
 <p>Waze es la aplicación de tráfico y navegación basada en la comunidad más grande del mundo. Únete a los conductores de tu área que comparten el tráfico e información de ruta en tiempo real ahorrando todos tiempo y dinero en sus desplazamientos diarios.</p>
 
     </div>
-
-  </div>
-
-
 </div>
 

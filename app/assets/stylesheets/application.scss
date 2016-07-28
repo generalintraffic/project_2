@@ -114,6 +114,7 @@ img.td{
 /*phone-rectanguler*/
 
 .phone {
+
   position: absolute;
   width: 86px;
   height: 11px;
@@ -365,4 +366,28 @@ button.btn.btn-warning.ta{
   position:relative;
   top: 0; left: 0;
   /*Luz mas intenso que el normal*/
+
+    position: absolute;
+    width: 86px;
+    height: 11px;
+    background: rgba(64, 64, 64, 0.3);
+    top: 3px;
+    left: 25px;
+    border-radius: 29px;
+}
+
+/*Log in*/
+.log{
+  margin: 10px 10px -15px 10px; 
+}
+.log-button{
+  letter-spacing: 1px;
+}
+.log-menu{
+  margin-top: 0px;
+  margin-bottom: 9px;
+}
+.log-message{
+  margin: 10px 10px 0px 10px;
+
 }

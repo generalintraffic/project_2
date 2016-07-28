@@ -5961,3 +5961,1125 @@ Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac
 
 
 Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for 127.0.0.1 at 2016-07-26 22:30:45 -0400
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2016-07-27 23:31:04 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError - 
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+:
+  activerecord (4.2.6) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.6) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/loldlm/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/loldlm/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/loldlm/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/cc46246c06fe5bf3/variables" for 127.0.0.1 at 2016-07-27 23:31:05 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddTokenDnsToUsers (20160728024201)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (21.0ms)[0m  [1mALTER TABLE "users" ADD "tokenDNS" varchar[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160728024201"]]
+  [1m[36m (123.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.9ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2016-07-27 23:32:21 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::InfoController#routes as HTML
+  Rendered /home/loldlm/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.0ms)
+  Rendered /home/loldlm/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (21.8ms)
+  Rendered /home/loldlm/.rvm/gems/ruby-2.3.0/gems/railties-4.2.6/lib/rails/templates/rails/info/routes.html.erb within layouts/application (60.0ms)
+Completed 200 OK in 178ms (Views: 137.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-07-27 23:32:39 -0400
+Processing by Devise::SessionsController#new as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 209ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-27 23:32:40 -0400
+Processing by UsersController#get_token as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "users" SET "token" = ?, "tokenDNS" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["token", "ddd5b9def6219678ddc9653001030b28a47d9317"], ["tokenDNS", "ff764ee57cdc5dc2eb558d354bd487a5f8f68eb0"], ["updated_at", "2016-07-28 03:32:41.900352"], ["id", 1]]
+  [1m[36m (294.6ms)[0m  [1mcommit transaction[0m
+  Rendered users/get_token.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 2102ms (ActiveRecord: 296.7ms)
+
+SyntaxError - syntax error, unexpected keyword_ensure, expecting end-of-input:
+  app/views/users/get_token.html.erb:122:in `'
+  actionview (4.2.6) lib/action_view/template.rb:296:in `compile'
+  actionview (4.2.6) lib/action_view/template.rb:245:in `block (2 levels) in compile!'
+  activesupport (4.2.6) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.6) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.6) lib/action_view/template.rb:244:in `block in compile!'
+  actionview (4.2.6) lib/action_view/template.rb:232:in `compile!'
+  actionview (4.2.6) lib/action_view/template.rb:144:in `block in render'
+  activesupport (4.2.6) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.6) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.6) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.6) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.6) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.6) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.6) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/loldlm/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/mime_responds.rb:217:in `respond_to'
+  app/controllers/users_controller.rb:11:in `get_token'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  warden (1.2.6) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.6) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/loldlm/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/loldlm/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/loldlm/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/92923e2661813bf4/variables" for 127.0.0.1 at 2016-07-27 23:32:42 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-27 23:38:36 -0400
+Processing by UsersController#get_token as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mUPDATE "users" SET "token" = ?, "tokenDNS" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["token", "f33516dd9059a19bd1608c2d1daf68aa3760cfde"], ["tokenDNS", "2663a7147c6f9280ddd9dfc59265a09ace122e09"], ["updated_at", "2016-07-28 03:38:37.807382"], ["id", 1]]
+  [1m[35m (112.9ms)[0m  commit transaction
+  Rendered users/get_token.html.erb within layouts/application (2.0ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/loldlm/.rvm/gems/ruby-2.3.0/gems/mapbox-rails-1.6.1.1/vendor/assets/stylesheets/mapbox.css.scss to /home/loldlm/.rvm/gems/ruby-2.3.0/gems/mapbox-rails-1.6.1.1/vendor/assets/stylesheets/mapbox.scss. (called from _app_views_layouts_application_html_erb__546937574_102772190 at /home/loldlm/Academia-hack/proyecto_final/NeighbourIntraffic/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /home/loldlm/.rvm/gems/ruby-2.3.0/gems/mapbox-rails-1.6.1.1/vendor/assets/stylesheets/mapbox.css.scss to /home/loldlm/.rvm/gems/ruby-2.3.0/gems/mapbox-rails-1.6.1.1/vendor/assets/stylesheets/mapbox.scss. (called from _app_views_layouts_application_html_erb__546937574_102772190 at /home/loldlm/Academia-hack/proyecto_final/NeighbourIntraffic/app/views/layouts/application.html.erb:5)
+Completed 200 OK in 13757ms (Views: 11977.8ms | ActiveRecord: 114.6ms)
+
+
+Started GET "/assets/application.self-c4436de13e4d9a7661460e17f2d7ffa1ac9b6d57809d858aeb5b10f1360afbce.css?body=1" for 127.0.0.1 at 2016-07-27 23:38:50 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-27 23:38:50 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-07-27 23:38:50 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-07-27 23:38:50 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-07-27 23:38:50 -0400
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-07-27 23:38:50 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-07-27 23:38:50 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-07-27 23:38:50 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-07-27 23:38:50 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-07-27 23:38:50 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-07-27 23:38:50 -0400
+
+
+Started GET "/assets/inTraffic.self-a3d9424794e10b7275a93065d235bab4e727945857b276e1f0419c276d1df3a6.js?body=1" for 127.0.0.1 at 2016-07-27 23:38:50 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-07-27 23:38:50 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-07-27 23:38:50 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-07-27 23:38:50 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-07-27 23:38:50 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-27 23:38:50 -0400
+
+
+Started GET "/assets/npm-rails/development/npm-dependencies.self-f469c6a162ce951bd6b15cac8825345003e22f04643d5811901e0113697e9abe.js?body=1" for 127.0.0.1 at 2016-07-27 23:38:50 -0400
+
+
+Started GET "/assets/MovingMarker.self-55b93b039b582fad17de7995f910cbbd10ee9abca9d9db0401d15be483c87bc0.js?body=1" for 127.0.0.1 at 2016-07-27 23:38:50 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for 127.0.0.1 at 2016-07-27 23:38:51 -0400
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for 127.0.0.1 at 2016-07-27 23:38:51 -0400
+
+
+Started GET "/assets/icons-000000-8b954de82c204c346140411a68b90261d4beeb5a25563d4bcaffd324d4f1d765.png" for 127.0.0.1 at 2016-07-27 23:38:51 -0400
+
+
+Started POST "/neighbour" for 127.0.0.1 at 2016-07-27 23:39:40 -0400
+Processing by UsersController#neighbour_traffic as JSON
+  Parameters: {"coordinates"=>{"pointRadio"=>["-66.87532424926758,10.496167049583772", "0.002"]}}
+  [1m[36mUser Load (1.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 591ms (Views: 40.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/market.png" for 127.0.0.1 at 2016-07-27 23:39:41 -0400
+
+
+Started POST "/neighbour" for 127.0.0.1 at 2016-07-27 23:39:45 -0400
+Processing by UsersController#neighbour_traffic as JSON
+  Parameters: {"coordinates"=>{"pointRadio"=>["-66.88482999801636,10.499395122047497", "0.002"]}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 489ms (Views: 27.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/neighbour" for 127.0.0.1 at 2016-07-27 23:39:49 -0400
+Processing by UsersController#neighbour_traffic as JSON
+  Parameters: {"coordinates"=>{"pointRadio"=>["-66.87648296356201,10.50110408794227", "0.002"]}}
+  [1m[36mUser Load (3.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 306ms (Views: 23.7ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/neighbour" for 127.0.0.1 at 2016-07-27 23:39:55 -0400
+Processing by UsersController#neighbour_traffic as JSON
+  Parameters: {"coordinates"=>{"pointRadio"=>["-66.87302827835083,10.501589348140735", "0.002"]}}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 498ms (Views: 19.3ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/neighbour" for 127.0.0.1 at 2016-07-27 23:39:58 -0400
+Processing by UsersController#neighbour_traffic as JSON
+  Parameters: {"coordinates"=>{"pointRadio"=>["-66.87873601913452,10.50232778611144", "0.002"]}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 478ms (Views: 20.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/neighbour" for 127.0.0.1 at 2016-07-27 23:40:05 -0400
+Processing by UsersController#neighbour_traffic as JSON
+  Parameters: {"coordinates"=>{"pointRadio"=>["-66.88798427581787,10.500450040382466", "0.002"]}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 355ms (Views: 38.5ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/neighbour" for 127.0.0.1 at 2016-07-27 23:40:10 -0400
+Processing by UsersController#neighbour_traffic as JSON
+  Parameters: {"coordinates"=>{"pointRadio"=>["-66.88731908798218,10.504521991385328", "0.002"]}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 428ms (Views: 28.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/neighbour" for 127.0.0.1 at 2016-07-27 23:40:29 -0400
+Processing by UsersController#neighbour_traffic as JSON
+  Parameters: {"coordinates"=>{"pointRadio"=>["-66.88332796096802,10.503931245344177", "0.002"]}}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 420ms (Views: 22.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2016-07-27 23:41:56 -0400
+Processing by Rails::InfoController#routes as HTML
+  Rendered /home/loldlm/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.9ms)
+  Rendered /home/loldlm/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
+  Rendered /home/loldlm/.rvm/gems/ruby-2.3.0/gems/railties-4.2.6/lib/rails/templates/rails/info/routes.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-07-27 23:42:06 -0400
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 83ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-27 23:42:06 -0400
+Processing by UsersController#get_token as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "users" SET "token" = ?, "tokenDNS" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["token", "ff679ab54e803d8ad889f705bfad5588140c18d3"], ["tokenDNS", "f644a1e68abe8e7c817a0d943f320a99e2238b6b"], ["updated_at", "2016-07-28 03:42:08.137126"], ["id", 1]]
+  [1m[35m (133.4ms)[0m  commit transaction
+  Rendered users/get_token.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2108ms (Views: 180.9ms | ActiveRecord: 135.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-27 23:45:50 -0400
+Processing by UsersController#get_token as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.9ms)[0m  UPDATE "users" SET "token" = ?, "tokenDNS" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["token", "bde7378dc9ec227813c4773dfaffe5a8f9353bc6"], ["tokenDNS", "120bcff280048db921b8a5082792b9bc2d8ab264"], ["updated_at", "2016-07-28 03:45:51.660888"], ["id", 1]]
+  [1m[36m (127.0ms)[0m  [1mcommit transaction[0m
+  Rendered users/get_token.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 1952ms (Views: 183.5ms | ActiveRecord: 129.8ms)
+
+
+Started GET "/assets/application.self-c4436de13e4d9a7661460e17f2d7ffa1ac9b6d57809d858aeb5b10f1360afbce.css?body=1" for 127.0.0.1 at 2016-07-27 23:45:52 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-27 23:45:52 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-07-27 23:45:52 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-07-27 23:45:52 -0400
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-07-27 23:45:52 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-07-27 23:45:52 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-07-27 23:45:52 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-07-27 23:45:52 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-07-27 23:45:52 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-07-27 23:45:52 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-07-27 23:45:52 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-07-27 23:45:52 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-07-27 23:45:52 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-07-27 23:45:52 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-07-27 23:45:52 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-27 23:45:52 -0400
+
+
+Started GET "/assets/MovingMarker.self-55b93b039b582fad17de7995f910cbbd10ee9abca9d9db0401d15be483c87bc0.js?body=1" for 127.0.0.1 at 2016-07-27 23:45:52 -0400
+
+
+Started GET "/assets/inTraffic.self-a3d9424794e10b7275a93065d235bab4e727945857b276e1f0419c276d1df3a6.js?body=1" for 127.0.0.1 at 2016-07-27 23:45:52 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for 127.0.0.1 at 2016-07-27 23:45:53 -0400
+
+
+Started GET "/assets/npm-rails/development/npm-dependencies.self-f469c6a162ce951bd6b15cac8825345003e22f04643d5811901e0113697e9abe.js?body=1" for 127.0.0.1 at 2016-07-27 23:45:53 -0400
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for 127.0.0.1 at 2016-07-27 23:45:53 -0400
+
+
+Started GET "/assets/icons-000000-8b954de82c204c346140411a68b90261d4beeb5a25563d4bcaffd324d4f1d765.png" for 127.0.0.1 at 2016-07-27 23:45:53 -0400
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2016-07-27 23:46:10 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QfuSwKs9UbmWgGgYj7tufu8PIvVUjK0O1VmDavobk6GNuLYtInidcajaWlmzTKT8Pe0HLTu15DJmEfT/SHa1HA=="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 57ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-27 23:46:10 -0400
+Processing by UsersController#get_token as HTML
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+NoMethodError - undefined method `id' for nil:NilClass:
+  app/controllers/users_controller.rb:7:in `get_token'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  warden (1.2.6) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.6) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/loldlm/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/loldlm/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/loldlm/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/0fb2f36e9c63a257/variables" for 127.0.0.1 at 2016-07-27 23:46:11 -0400
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2016-07-27 23:46:20 -0400
+Processing by Rails::InfoController#routes as HTML
+  Rendered /home/loldlm/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.6ms)
+  Rendered /home/loldlm/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /home/loldlm/.rvm/gems/ruby-2.3.0/gems/railties-4.2.6/lib/rails/templates/rails/info/routes.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 33ms (Views: 31.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-07-27 23:46:29 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (3.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (65.7ms)
+Completed 200 OK in 268ms (Views: 221.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/mapMovil-01be6e1cbe1af0511aded1a3e7fddab5187d37758bb4c5e0c9f4e66c22c7e6b9.jpg" for 127.0.0.1 at 2016-07-27 23:46:29 -0400
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2016-07-27 23:48:58 -0400
+Processing by Rails::InfoController#routes as HTML
+  Rendered /home/loldlm/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.1ms)
+  Rendered /home/loldlm/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /home/loldlm/.rvm/gems/ruby-2.3.0/gems/railties-4.2.6/lib/rails/templates/rails/info/routes.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 29ms (Views: 25.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2016-07-27 23:50:29 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 204ms (Views: 201.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2016-07-27 23:50:37 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 191ms (Views: 188.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-27 23:51:23 -0400
+Processing by UsersController#get_token as HTML
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+NoMethodError - undefined method `id' for nil:NilClass:
+  app/controllers/users_controller.rb:7:in `get_token'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  warden (1.2.6) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.6) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/loldlm/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/loldlm/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/loldlm/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/ccced0b1a48a0f54/variables" for 127.0.0.1 at 2016-07-27 23:51:24 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-27 23:51:51 -0400
+Processing by UsersController#get_token as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.1ms)[0m  [1mUPDATE "users" SET "token" = ?, "tokenDNS" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["token", "f3c5631c5386d47a4503033d8248e26a12e05e56"], ["tokenDNS", "96042cd06c9ec8f5d8943ea8d78e8dab2f9559ca"], ["updated_at", "2016-07-28 03:51:53.491289"], ["id", 1]]
+  [1m[35m (132.1ms)[0m  commit transaction
+  Rendered users/get_token.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 2072ms (Views: 161.1ms | ActiveRecord: 135.7ms)
+
+
+Started GET "/assets/application.self-c4436de13e4d9a7661460e17f2d7ffa1ac9b6d57809d858aeb5b10f1360afbce.css?body=1" for 127.0.0.1 at 2016-07-27 23:51:54 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-07-27 23:51:54 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-27 23:51:54 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-07-27 23:51:54 -0400
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-07-27 23:51:54 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-07-27 23:51:54 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-07-27 23:51:54 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-07-27 23:51:54 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-07-27 23:51:54 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-07-27 23:51:54 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-07-27 23:51:54 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-07-27 23:51:54 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-07-27 23:51:54 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-07-27 23:51:54 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-07-27 23:51:54 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-27 23:51:54 -0400
+
+
+Started GET "/assets/npm-rails/development/npm-dependencies.self-f469c6a162ce951bd6b15cac8825345003e22f04643d5811901e0113697e9abe.js?body=1" for 127.0.0.1 at 2016-07-27 23:51:54 -0400
+
+
+Started GET "/assets/MovingMarker.self-55b93b039b582fad17de7995f910cbbd10ee9abca9d9db0401d15be483c87bc0.js?body=1" for 127.0.0.1 at 2016-07-27 23:51:54 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for 127.0.0.1 at 2016-07-27 23:51:54 -0400
+
+
+Started GET "/assets/inTraffic.self-a3d9424794e10b7275a93065d235bab4e727945857b276e1f0419c276d1df3a6.js?body=1" for 127.0.0.1 at 2016-07-27 23:51:54 -0400
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for 127.0.0.1 at 2016-07-27 23:51:55 -0400
+
+
+Started GET "/assets/icons-000000-8b954de82c204c346140411a68b90261d4beeb5a25563d4bcaffd324d4f1d765.png" for 127.0.0.1 at 2016-07-27 23:51:55 -0400
+
+
+Started GET "/token" for 127.0.0.1 at 2016-07-28 09:29:05 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#get_token as HTML
+Completed 401 Unauthorized in 78ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-07-28 09:29:06 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (3.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (1694.7ms)
+Completed 200 OK in 2307ms (Views: 2252.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/inTraffic.self-8ce09b68b4bb53cc94e8bbebc8113685489c0428429f2511cffc2c9a6113bb10.js?body=1" for 127.0.0.1 at 2016-07-28 09:29:10 -0400
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2016-07-28 09:29:20 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O+Dptozp1503czPKvDJoCCjeE/IADUOo9FEB1Eulf58kYMkLsHWxcSi01P5ibhT5JD6F9ssqlyYpE4R7P9ddgw==", "user"=>{"email"=>"loldlm1@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (1.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "loldlm1@gmail.com"]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (22.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-07-26 16:18:55.542421"], ["current_sign_in_at", "2016-07-28 13:29:21.153674"], ["sign_in_count", 9], ["updated_at", "2016-07-28 13:29:21.156195"], ["id", 1]]
+  [1m[36m (153.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/token
+Completed 302 Found in 790ms (ActiveRecord: 177.0ms)
+
+
+Started GET "/token" for 127.0.0.1 at 2016-07-28 09:29:21 -0400
+Processing by UsersController#get_token as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mUPDATE "users" SET "token" = ?, "tokenDNS" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["token", "dfb40c080ec932d529dde0e4791ffc0dbcbd9ab4"], ["tokenDNS", "d5a58c0fe02b9041e2355f75f4cbabdb84c4c98a"], ["updated_at", "2016-07-28 13:29:43.870675"], ["id", 1]]
+  [1m[35m (118.6ms)[0m  commit transaction
+  Rendered users/get_token.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 22751ms (Views: 170.1ms | ActiveRecord: 121.2ms)
+
+
+Started GET "/token" for 127.0.0.1 at 2016-07-28 09:31:11 -0400
+Processing by UsersController#get_token as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "token" = ?, "tokenDNS" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["token", "f4c1bd1d8cc17c6e1ef74e29692a7bf7fae520fc"], ["tokenDNS", "e676ba442dbabfa2aa5eea455671f44a7ac20b3f"], ["updated_at", "2016-07-28 13:31:20.170195"], ["id", 1]]
+  [1m[36m (133.5ms)[0m  [1mcommit transaction[0m
+  Rendered users/get_token.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 8838ms (Views: 245.6ms | ActiveRecord: 134.9ms)
+
+
+Started GET "/assets/application.self-c4436de13e4d9a7661460e17f2d7ffa1ac9b6d57809d858aeb5b10f1360afbce.css?body=1" for 127.0.0.1 at 2016-07-28 09:31:20 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-28 09:31:21 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-07-28 09:31:21 -0400
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-07-28 09:31:21 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-07-28 09:31:21 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-07-28 09:31:21 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-07-28 09:31:21 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-07-28 09:31:21 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-07-28 09:31:21 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-07-28 09:31:21 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-07-28 09:31:21 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-07-28 09:31:21 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-07-28 09:31:21 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-07-28 09:31:21 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-07-28 09:31:21 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-28 09:31:21 -0400
+
+
+Started GET "/assets/npm-rails/development/npm-dependencies.self-f469c6a162ce951bd6b15cac8825345003e22f04643d5811901e0113697e9abe.js?body=1" for 127.0.0.1 at 2016-07-28 09:31:21 -0400
+
+
+Started GET "/assets/MovingMarker.self-55b93b039b582fad17de7995f910cbbd10ee9abca9d9db0401d15be483c87bc0.js?body=1" for 127.0.0.1 at 2016-07-28 09:31:21 -0400
+
+
+Started GET "/assets/inTraffic.self-8ce09b68b4bb53cc94e8bbebc8113685489c0428429f2511cffc2c9a6113bb10.js?body=1" for 127.0.0.1 at 2016-07-28 09:31:21 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for 127.0.0.1 at 2016-07-28 09:31:21 -0400
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for 127.0.0.1 at 2016-07-28 09:31:22 -0400
+
+
+Started GET "/assets/icons-000000-8b954de82c204c346140411a68b90261d4beeb5a25563d4bcaffd324d4f1d765.png" for 127.0.0.1 at 2016-07-28 09:31:22 -0400
+
+
+Started GET "/token" for 127.0.0.1 at 2016-07-28 09:33:31 -0400
+Processing by UsersController#get_token as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "token" = ?, "tokenDNS" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["token", "e8c2264ca3f3f7b83dd422145abd791d171b5810"], ["tokenDNS", "aad8174c4b481194d000bab685592bf4b98be66a"], ["updated_at", "2016-07-28 13:33:33.824236"], ["id", 1]]
+  [1m[35m (113.9ms)[0m  commit transaction
+  Rendered users/get_token.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 2770ms (Views: 169.4ms | ActiveRecord: 115.0ms)
+
+
+Started GET "/assets/application.self-c4436de13e4d9a7661460e17f2d7ffa1ac9b6d57809d858aeb5b10f1360afbce.css?body=1" for 127.0.0.1 at 2016-07-28 09:33:34 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-28 09:33:34 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-07-28 09:33:34 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-07-28 09:33:34 -0400
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-07-28 09:33:34 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-07-28 09:33:34 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-07-28 09:33:34 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-07-28 09:33:34 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-07-28 09:33:34 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-07-28 09:33:34 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-07-28 09:33:34 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-07-28 09:33:34 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-07-28 09:33:34 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-07-28 09:33:34 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-07-28 09:33:35 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-28 09:33:35 -0400
+
+
+Started GET "/assets/npm-rails/development/npm-dependencies.self-f469c6a162ce951bd6b15cac8825345003e22f04643d5811901e0113697e9abe.js?body=1" for 127.0.0.1 at 2016-07-28 09:33:35 -0400
+
+
+Started GET "/assets/MovingMarker.self-55b93b039b582fad17de7995f910cbbd10ee9abca9d9db0401d15be483c87bc0.js?body=1" for 127.0.0.1 at 2016-07-28 09:33:35 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for 127.0.0.1 at 2016-07-28 09:33:35 -0400
+
+
+Started GET "/assets/inTraffic.self-8ce09b68b4bb53cc94e8bbebc8113685489c0428429f2511cffc2c9a6113bb10.js?body=1" for 127.0.0.1 at 2016-07-28 09:33:35 -0400
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for 127.0.0.1 at 2016-07-28 09:33:35 -0400
+
+
+Started GET "/assets/icons-000000-8b954de82c204c346140411a68b90261d4beeb5a25563d4bcaffd324d4f1d765.png" for 127.0.0.1 at 2016-07-28 09:33:35 -0400
+
+
+Started POST "/neighbour" for 127.0.0.1 at 2016-07-28 09:34:08 -0400
+Processing by UsersController#neighbour_traffic as JSON
+  Parameters: {"coordinates"=>{"pointRadio"=>["-66.8964385986328,10.50274974987401", "0.002"]}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 1970ms (Views: 29.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/market.png" for 127.0.0.1 at 2016-07-28 09:34:10 -0400
+
+
+Started POST "/neighbour" for 127.0.0.1 at 2016-07-28 09:34:19 -0400
+Processing by UsersController#neighbour_traffic as JSON
+  Parameters: {"coordinates"=>{"pointRadio"=>["-66.89023733139038,10.504859560044636", "0.002"]}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 1576ms (Views: 24.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/neighbour" for 127.0.0.1 at 2016-07-28 09:34:33 -0400
+Processing by UsersController#neighbour_traffic as JSON
+  Parameters: {"coordinates"=>{"pointRadio"=>["-66.89747929573059,10.504648579675775", "0.002"]}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 2396ms (Views: 24.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/neighbour" for 127.0.0.1 at 2016-07-28 09:34:42 -0400
+Processing by UsersController#neighbour_traffic as JSON
+  Parameters: {"coordinates"=>{"pointRadio"=>["-66.89581632614136,10.505038893244896", "0.002"]}}
+  [1m[36mUser Load (3.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 1261ms (Views: 38.7ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/neighbour" for 127.0.0.1 at 2016-07-28 09:35:04 -0400
+Processing by UsersController#neighbour_traffic as JSON
+  Parameters: {"coordinates"=>{"pointRadio"=>["-66.88719034194946,10.50471187380156", "0.002"]}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 1496ms (Views: 27.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/neighbour" for 127.0.0.1 at 2016-07-28 09:35:12 -0400
+Processing by UsersController#neighbour_traffic as JSON
+  Parameters: {"coordinates"=>{"pointRadio"=>["-66.89461469650269,10.50471187380156", "0.002"]}}
+  [1m[36mUser Load (5.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 2203ms (Views: 26.3ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/token" for 127.0.0.1 at 2016-07-28 09:38:11 -0400
+Processing by UsersController#get_token as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (24.1ms)[0m  UPDATE "users" SET "token" = ?, "tokenDNS" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["token", "fc30ba63e6732a6d94c68b87ca4b06650ea8aded"], ["tokenDNS", "d224c6085ebd064f389114880249b583e67d8cf0"], ["updated_at", "2016-07-28 13:38:30.352859"], ["id", 1]]
+  [1m[36m (139.6ms)[0m  [1mcommit transaction[0m
+  Rendered users/get_token.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 18840ms (Views: 201.5ms | ActiveRecord: 164.5ms)
+
+
+Started GET "/assets/application.self-c4436de13e4d9a7661460e17f2d7ffa1ac9b6d57809d858aeb5b10f1360afbce.css?body=1" for 127.0.0.1 at 2016-07-28 09:38:31 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-28 09:38:31 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-07-28 09:38:31 -0400
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-07-28 09:38:31 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-07-28 09:38:31 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-07-28 09:38:31 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-07-28 09:38:31 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-07-28 09:38:31 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-07-28 09:38:31 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-07-28 09:38:31 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-07-28 09:38:31 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-07-28 09:38:31 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-07-28 09:38:31 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-07-28 09:38:31 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-07-28 09:38:31 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-28 09:38:31 -0400
+
+
+Started GET "/assets/npm-rails/development/npm-dependencies.self-f469c6a162ce951bd6b15cac8825345003e22f04643d5811901e0113697e9abe.js?body=1" for 127.0.0.1 at 2016-07-28 09:38:31 -0400
+
+
+Started GET "/assets/MovingMarker.self-55b93b039b582fad17de7995f910cbbd10ee9abca9d9db0401d15be483c87bc0.js?body=1" for 127.0.0.1 at 2016-07-28 09:38:31 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for 127.0.0.1 at 2016-07-28 09:38:31 -0400
+
+
+Started GET "/assets/inTraffic.self-8ce09b68b4bb53cc94e8bbebc8113685489c0428429f2511cffc2c9a6113bb10.js?body=1" for 127.0.0.1 at 2016-07-28 09:38:31 -0400
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for 127.0.0.1 at 2016-07-28 09:38:34 -0400
+
+
+Started GET "/assets/icons-000000-8b954de82c204c346140411a68b90261d4beeb5a25563d4bcaffd324d4f1d765.png" for 127.0.0.1 at 2016-07-28 09:38:34 -0400
+
+
+Started GET "/assets/market.png" for 127.0.0.1 at 2016-07-28 09:38:48 -0400
+
+
+Started POST "/neighbour" for 127.0.0.1 at 2016-07-28 09:38:48 -0400
+Processing by UsersController#neighbour_traffic as JSON
+  Parameters: {"coordinates"=>{"pointRadio"=>["-66.88459396362303,10.49878326776383", "0.002"]}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 2607ms (Views: 26.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/neighbour" for 127.0.0.1 at 2016-07-28 09:38:56 -0400
+Processing by UsersController#neighbour_traffic as JSON
+  Parameters: {"coordinates"=>{"pointRadio"=>["-66.87656879425049,10.50129397245848", "0.002"]}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 1698ms (Views: 17.3ms | ActiveRecord: 0.5ms)

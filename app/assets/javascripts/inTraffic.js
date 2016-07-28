@@ -16,7 +16,6 @@ var c, pointB, markB = true,
     radioChek = true;
 
 // iniciando APP!
-
 init();
 
 // Punto de origen
@@ -25,6 +24,7 @@ function init(){
   map.on('click', function(ev) {
     if (count == true && x== true) {
       origin = [ev.latlng.lat, ev.latlng.lng];
+
       coordinates();
       count = false;
     }
@@ -41,8 +41,9 @@ function init(){
 
 function coordinates(){
    fixedMarker = L.marker(new L.LatLng(origin[0],origin[1]), {
-    icon: L.mapbox.marker.icon({
-      'marker-color': 'ff8888'
+    icon: L.icon({
+      iconUrl: 'assets/market.png',
+      iconSize: [40, 40]
     })
   }).bindPopup('Punto de Origen').addTo(map);
   fixedCircle = L.circle(origin, 300).addTo(map)
@@ -142,6 +143,8 @@ function text(){
     routing();
     var container = document.getElementById('button-wrapper');
     container.innerHTML = "<h3>Cagando su via...</h3>";
+
+
   }
 };
 
@@ -165,19 +168,23 @@ function destination(){
 
 function end(){
   if (!count){
-    $("#button-wrapper").append(
-      $('<button>',{id:"input",type:"button"}).html('Final Destination').click(function(){
+    $("#circulo2").append(
+      $('<button>',{class:"btn btn-warning ta" ,type:"button"}).html('Destino').click(function(){
         map.off("click");
-        if (confirm("Do you wish to continue?") == true) {
+        if (confirm("Destino") == true) {
           change(final);
           coord.push(final.toString());
           console.log(coord);
+          //
+          //var container = document.getElementById('meters');
+          //container.innerHTML = (origin.distanceTo(final)).toFixed(0) + 'm';
+
           text();               
         } else {
           end();
         }
       })
-    );
+      );
     count=true;
   }
 };

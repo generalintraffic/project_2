@@ -46,8 +46,7 @@ function coordinates(){
       iconSize: [40, 40]
     })
   }).bindPopup('Punto de Origen').addTo(map);
-  //fixedCircle = L.circle(origin, 300).addTo(map)
-  fixedCircle = L.circle(origin, 300, {color: "rgba(158, 158, 158, 0.53)"}).addTo(map)
+  fixedCircle = L.circle(origin, 300).addTo(map)
   console.log(origin, true);
   change(origin, true);
 };
@@ -58,9 +57,7 @@ function coordinates(){
 function change(points, Porigin = false) {
   var index = points[0];
   points[0] = points[1];
-  //points[1] = index;
-  radioTraffic(points);
-
+  points[1] = index;
   if (Porigin == true) {
     radioTraffic();
   }
@@ -68,45 +65,25 @@ function change(points, Porigin = false) {
 
 // Ajax que obtiene el trafico del Radio
 
-radioTraffic = (points) => {
+radioTraffic = () => {
   $.ajax({
     url:'http://localhost:3000/neighbour',
     method:"POST",
     dataType:"json",
     data: {coordinates: 
-      {pointRadio: [points.toString(),'0.002']}
+      {pointRadio: [origin.toString(),'0.002']}
     },
     success: (data) => {
       if (data.error) {
-        //getToken(true);
+        getToken(true);
       } else {
         console.log(data)
         if (radioChek == true) {
-          //radioLayer = L.geoJson(data).addTo(map);
-          radioLayer = L.geoJson(data, {
-             style: (feature) => {
-               switch (feature.properties.rt_traffic_status) {
-                 case 1: return {color: "#84ca50"}
-                 case 2: return {color: "#f07d02"}
-                 case 3: return {color: "#e60000"}
-                 case 4: return {color: "#9e1313"}
-               }
-             }
-           }).addTo(map);
+          radioLayer = L.geoJson(data).addTo(map);
           map.fitBounds(radioLayer.getBounds());
         } else {
           map.removeLayer(radioLayer)
-          radioLayer = L.geoJson(data, {
-             style: (feature) => {
-               switch (feature.properties.rt_traffic_status) {
-                 case 1: return {color: "#84ca50"}
-                 case 2: return {color: "#f07d02"}
-                 case 3: return {color: "#e60000"}
-                 case 4: return {color: "#9e1313"}
-               }
-             }
-           }).addTo(map);
-          //radioLayer = L.geoJson(data).addTo(map);
+          radioLayer = L.geoJson(data).addTo(map);
           map.fitBounds(radioLayer.getBounds());
         }
         radioChek = false;

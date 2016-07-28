@@ -8912,3 +8912,117 @@ Processing by UsersController#get_token as JSON
   [1m[36mSQL (1.2ms)[0m  [1mUPDATE "users" SET "token" = ?, "tokenDNS" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["token", "f4f13d963352e3b0d3df5918a63ae5499a42d89e"], ["tokenDNS", "aef3307f61b3f9cb8d498141495241a8596ff8c5"], ["updated_at", "2016-07-28 15:35:18.728717"], ["id", 1]]
   [1m[35m (131.7ms)[0m  commit transaction
 Completed 200 OK in 1347ms (Views: 0.3ms | ActiveRecord: 133.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-28 18:21:33 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#get_token as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (36.9ms)[0m  [1mUPDATE "users" SET "token" = ?, "tokenDNS" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["token", "db46861b4ee1c696f4d147f4cfa73e14d65fa160"], ["tokenDNS", "859df2880e696527777f33a1684ab13d276dec1d"], ["updated_at", "2016-07-28 22:21:40.822981"], ["id", 2]]
+  [1m[35m (213.5ms)[0m  commit transaction
+  Rendered users/get_token.html.erb within layouts/application (42894.3ms)
+Completed 200 OK in 51342ms (Views: 43798.4ms | ActiveRecord: 252.9ms)
+
+
+Started POST "/neighbour" for 127.0.0.1 at 2016-07-28 18:22:24 -0400
+Processing by UsersController#neighbour_traffic as JSON
+  Parameters: {"coordinates"=>{"pointRadio"=>["-66.90776824951172,10.499964778395485", "0.002"]}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 422ms (Views: 22.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/market.png" for 127.0.0.1 at 2016-07-28 18:22:25 -0400
+
+
+Started GET "/assets/application.self-1eeae8d0ad612cde27ed84df49e3fb0f7439396d168e44aee025571023cc904f.css?body=1" for 127.0.0.1 at 2016-07-28 18:22:31 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-07-28 18:22:31 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" for 127.0.0.1 at 2016-07-28 18:22:31 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" for 127.0.0.1 at 2016-07-28 18:22:31 -0400
+
+
+Started GET "/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" for 127.0.0.1 at 2016-07-28 18:22:31 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" for 127.0.0.1 at 2016-07-28 18:22:31 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" for 127.0.0.1 at 2016-07-28 18:22:31 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" for 127.0.0.1 at 2016-07-28 18:22:31 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" for 127.0.0.1 at 2016-07-28 18:22:31 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" for 127.0.0.1 at 2016-07-28 18:22:31 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" for 127.0.0.1 at 2016-07-28 18:22:31 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" for 127.0.0.1 at 2016-07-28 18:22:31 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" for 127.0.0.1 at 2016-07-28 18:22:31 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" for 127.0.0.1 at 2016-07-28 18:22:31 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-07-28 18:22:31 -0400
+
+
+Started GET "/assets/leyenda-bc9cef33da295ca5b9b65058765c4d9c3f8ac47d5eb468124096f056c137a680.png" for 127.0.0.1 at 2016-07-28 18:22:31 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-07-28 18:22:31 -0400
+
+
+Started GET "/assets/npm-rails/development/npm-dependencies.self-f469c6a162ce951bd6b15cac8825345003e22f04643d5811901e0113697e9abe.js?body=1" for 127.0.0.1 at 2016-07-28 18:22:31 -0400
+
+
+Started GET "/assets/MovingMarker.self-55b93b039b582fad17de7995f910cbbd10ee9abca9d9db0401d15be483c87bc0.js?body=1" for 127.0.0.1 at 2016-07-28 18:22:31 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for 127.0.0.1 at 2016-07-28 18:22:32 -0400
+
+
+Started GET "/assets/inTraffic.self-1edeaecf1be4046f45a50fa267e5d5214fdf8d71017c5bdcf95e9572f2623b42.js?body=1" for 127.0.0.1 at 2016-07-28 18:22:32 -0400
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for 127.0.0.1 at 2016-07-28 18:22:37 -0400
+
+
+Started GET "/assets/icons-000000-8b954de82c204c346140411a68b90261d4beeb5a25563d4bcaffd324d4f1d765.png" for 127.0.0.1 at 2016-07-28 18:22:38 -0400
+
+
+Started POST "/neighbour" for 127.0.0.1 at 2016-07-28 18:22:44 -0400
+Processing by UsersController#neighbour_traffic as JSON
+  Parameters: {"coordinates"=>{"pointRadio"=>["-66.9093132019043,10.498530086326765", "0.002"]}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 5315ms (Views: 30.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/market.png" for 127.0.0.1 at 2016-07-28 18:22:49 -0400
+
+
+Started POST "/pointers" for 127.0.0.1 at 2016-07-28 18:23:02 -0400
+Processing by UsersController#dataPointers as JSON
+  Parameters: {"coordinates"=>{"points"=>["-66.9093132019043,10.498530086326765", "-66.91474199295044,10.500566081179532"]}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 1325ms (Views: 3.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/flag.png" for 127.0.0.1 at 2016-07-28 18:23:03 -0400

@@ -1,51 +1,89 @@
 
 <div id='map'></div>
+<!--
 <pre id='distance' class='ui-distance'>
-<button type="button" class="btn btn-primary btn-md btn-block" onclick="myFunction()">Establecer como Origen</button>
+<button type="button" class="btn btn-success btn-md btn-block" onclick="myFunction()">Establecer como Origen</button>
 </pre>
-
+-->
+<!--
 <div id="button-wrapper"></div> 
+-->
+
 
 <div id="direction">
 	
 	<% if user_signed_in? %>
   <li>
 
-<a href="/users/sign_out" data-method = "delete" data-toggle="tooltip" data-placement="botton" title="Cerrar Sesion">
-  <span class="glyphicon glyphicon-off td">
-</span>
-</a>
+    <a href="/users/sign_out" data-method = "delete" data-toggle="tooltip" data-placement="botton" title="Cerrar Sesion">
+      <span class="glyphicon glyphicon-off td">
+      </span>
+    </a>
   </li>
 
-<% else %>
+  <% else %>
   <li>
-  <a href="/users/sign_in" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+    <a href="/users/sign_in" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
 
-  <span class="glyphicon glyphicon-off td">
-  <!--<%= link_to('', new_user_session_path)  %>  -->
+      <span class="glyphicon glyphicon-off td">
+        <!--<%= link_to('', new_user_session_path)  %>  -->
 
-  </span>
+      </span>
 
-  </a>
+    </a>
   </li>
-<% end %>
+  <% end %>
 
 
 
-<div class="table-info">
+  <div class="table-info">
 
-<dl>
-  <dt>Distancia en metros</dt>
-  <dd>
-    <div id ='meters' class='ui-meters'>
-</div> 
-    
-  </dd>
-</dl>
+    <dl>
+      <dt>Distancia en metros</dt>
+      <dd>
+        <div id ='meters' class='ui-meters'>
+        </div> 
+
+      </dd>
+    </dl>
+
+  </div>
+
+  <div id="message">
+  </div>
+
+
+  <div id= "distance" class="container-semaforo">
+    <div id="box-out">
+      <div id="box-inside">
+
+        <!--rojo-->  
+      <button type="button" onclick="myFunction()" class="td" data-toggle="tooltip" data-placement="botton" title="Establecer como Origen">
+        <div id="circulo3" class="color3"></div>
+      </button>
+
+      <!--amarillo-->
+      <button type="button"  class="btn btn-primary tf" data-toggle="tooltip" data-placement="botton" title="Establecer como Destino">
+      <div id="circulo2" class="color2"></div>
+        </button>
+
+      <!--verde-->
+      <div id="circulo1" class="color1">
+      </div>
+
+      
+      
+
+
+    </div>
+  </div>
 
 </div>
 
+
+
 </div>
+
 
 
 <!--

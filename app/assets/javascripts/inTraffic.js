@@ -7,11 +7,11 @@ var map = L.mapbox.map('map', 'mapbox.streets', {
 // Punto de origen
 
 var c, pointB, markB = true,
-    fixedMarker, count = true, 
-    x = true, origin = [], 
-    final = [], coord= [], 
-    dataCoord, radius = [],
-    aCount = 0;
+fixedMarker, count = true, 
+x = true, origin = [], 
+final = [], coord= [], 
+dataCoord, radius = [],
+aCount = 0;
 
 init();
 
@@ -19,6 +19,7 @@ function init(){
   map.on('click', function(ev) {
     if (count == true && x== true) {
       origin = [ev.latlng.lat, ev.latlng.lng];
+
       coordinates();
       count = false;
     }
@@ -34,13 +35,16 @@ function init(){
 // coloca el marker y el radio en el punto de origen
 
 function coordinates(){
-   fixedMarker = L.marker(new L.LatLng(origin[0],origin[1]), {
-    icon: L.mapbox.marker.icon({
-      'marker-color': 'ff8888'
-    })
-  }).bindPopup('Punto de Origen').addTo(map);
-  fixedCircle = L.circle(origin, 300).addTo(map)
-  console.log(origin);
+ fixedMarker = L.marker(new L.LatLng(origin[0],origin[1]), {
+  icon: L.icon({
+    iconUrl: 'assets/market.png',
+    iconSize: [40, 40],
+
+  })
+
+}).bindPopup('Punto de Origen').addTo(map);
+ fixedCircle = L.circle(origin, 300).addTo(map)
+ console.log(origin);
   // change();
 };
 
@@ -107,7 +111,7 @@ function myFunction() {
     x = false;
     change(origin);
     coord.push(origin.toString());
-    var container = document.getElementById('distance');
+    var container = document.getElementById('message');
     container.innerHTML = "Esta listo para escoger su Punto B"
   } else {
     init();
@@ -125,6 +129,8 @@ function text(){
     routing();
     var container = document.getElementById('button-wrapper');
     container.innerHTML = "<h3>Cagando su via...</h3>";
+
+
   }
 };
 
@@ -134,7 +140,11 @@ function destination(){
   map.on('click', function (ev) {
     final = [ev.latlng.lat, ev.latlng.lng];
     if (markB == true) {
-      pointB = L.marker([ev.latlng.lat, ev.latlng.lng]).addTo(map);
+      pointB = L.marker([ev.latlng.lat, ev.latlng.lng])
+
+
+      .addTo(map);
+      console.log('hola');
     } else {
       map.removeLayer(pointB)
       pointB = L.marker([ev.latlng.lat, ev.latlng.lng]).addTo(map);
@@ -148,19 +158,23 @@ function destination(){
 
 function end(){
   if (!count){
-    $("#button-wrapper").append(
-      $('<button>',{id:"input",type:"button"}).html('Final Destination').click(function(){
+    $("#circulo2").append(
+      $('<button>',{class:"btn btn-warning ta" ,type:"button"}).html('Destino').click(function(){
         map.off("click");
-        if (confirm("Do you wish to continue?") == true) {
+        if (confirm("Destino") == true) {
           change(final);
           coord.push(final.toString());
           console.log(coord);
+          //
+          //var container = document.getElementById('meters');
+          //container.innerHTML = (origin.distanceTo(final)).toFixed(0) + 'm';
+
           text();               
         } else {
           end();
         }
       })
-    );
+      );
     count=true;
   }
 };
@@ -215,7 +229,7 @@ parsingCoord = (data) => {
 
 animation = () => {
   var marker2 = L.Marker.movingMarker(dataCoord,
-      30000, {autostart: true}).addTo(map);
+    30000, {autostart: true}).addTo(map);
   radioAnimationTraffic = setInterval(() => {
     radius.push(L.circle([marker2._currentLine[0].lat, marker2._currentLine[0].lng], 300).addTo(map))
     if (aCount++ > 0) {

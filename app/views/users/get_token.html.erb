@@ -1,11 +1,6 @@
 <div id='map'></div>
-  <pre id='distance' class='ui-distance'>
-  <button id="continue" class="btn btn-primary btn-md btn-block">Establecer como Origen</button>
-</pre>
 
 <div id="button-wrapper"></div> 
-
-
 
 <div id="direction">
 	<% if user_signed_in? %>
@@ -22,54 +17,31 @@
     </li>
   <% end %>
   <div class="table-info text-center">
-
     <dl>
-      <dt>Distancia en metros</dt>
+      <dt></dt>
       <dd>
-        <div id ='meters' class='ui-meters'>
-        </div>
         <button class="btn-success" id="restart">
         Resetear puntos
         </button> 
       </dd>
     </dl>
-
-  </div>
-<!-- 
-  <div id="message">
   </div>
 
+  <div id="sms">
+      
+  </div>
 
   <div id= "distance" class="container-semaforo">
     <div id="box-out">
       <div id="box-inside">
-
-      <button id="continue" class="td" data-toggle="tooltip" data-placement="botton" title="Establecer como Origen">
-        <div id="circulo3" class="color3"></div>
-      </button>
-
-      <button type="button"  class="btn btn-primary tf" data-toggle="tooltip" data-placement="botton" title="Establecer como Destino">
-      <div id="circulo2" class="color2"></div>
+        <button id="continue" class="td" data-toggle="tooltip" data-placement="botton" title="Establecer como Origen">
+          <div id="circulo3" class="color3"></div>
         </button>
-
-      <div id="circulo1" class="color1">
+        <button type="button"  class="btn btn-primary tf" data-toggle="tooltip" data-placement="botton" title="Establecer como Destino">
+          <div id="circulo2" class="color2"></div>
+        </button>
+        <div id="circulo1" class="color1">
       </div>
-
-      
-      
-
-
     </div>
   </div>
- -->
 </div>
-
-
-
-
-
-<!--
-
-<button type="button" class="btn btn-default btn-lg btn-block" onclick="myFunction()">Establecer como Destino</button>
-
--->

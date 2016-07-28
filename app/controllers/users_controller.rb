@@ -50,8 +50,6 @@ class UsersController < ApplicationController
   private
 
   def params_user
-    pramas.require(:user).permit(:token)
+    pramas.require(:user).permit(:token, :tokenDNS)
   end
-
-
 end

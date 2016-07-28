@@ -126,7 +126,7 @@ function selectedPoint() {
       text();
       x = false;
       coord.push(origin.toString());
-      var container = document.getElementById('distance');
+      var container = document.getElementById('sms');
       container.innerHTML = "<p>Esta listo para escoger su Punto B</p>"
     }
   });
@@ -143,8 +143,6 @@ function text(){
     routing();
     var container = document.getElementById('button-wrapper');
     container.innerHTML = "<h3>Cagando su via...</h3>";
-
-
   }
 };
 
@@ -175,10 +173,6 @@ function end(){
           change(final);
           coord.push(final.toString());
           console.log(coord);
-          //
-          //var container = document.getElementById('meters');
-          //container.innerHTML = (origin.distanceTo(final)).toFixed(0) + 'm';
-
           text();               
         } else {
           end();
@@ -278,7 +272,6 @@ restart = () => {
     aCount = 0, marker2 = null,
     trackLayer = null, radioLayer = null,
     radioChek = true;
-  $("#distance").html("<button id="+'"continue"'+" class="+'"btn btn-primary btn-md btn-block"'+">Establecer como Origen</button>");
   selectedPoint();
   init();
 }

@@ -4,10 +4,10 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  def uriToken
-    url = URI('https://api.intraffic.com.ve/oauth2/token')
+  def inTrafficTokens(url,ssl)
+    url = URI("#{url}/oauth2/token")
     https = Net::HTTP.new(url.host,url.port)
-    https.use_ssl = true
+    https.use_ssl = ssl
     https.verify_mode = OpenSSL::SSL::VERIFY_NONE
     client_secret = 'YWNhZGVtaWFoYWNrOjQzNTFkNDBmMzAzMGFhZDIyMDdmZTU3MTUyMjk4MTFiNzFjN2Y2ZWU='
 
@@ -23,7 +23,7 @@ class User < ActiveRecord::Base
       'Content-Length' => '29',
       'Authorization' => "Basic " + client_secret
       })
-    response = eval(req.read_body)
+    response = JSON.parse(req.read_body)
     return response
   end
 
@@ -48,7 +48,7 @@ class User < ActiveRecord::Base
   end
 
   def radioTraffic(token, pointRadio)
-    url = 'http://intraffic.duckdns.org:8096/links/in_circle.geojson'
+    url = 'https://intraffic.duckdns.org:8096/links/in_circle.geojson'
     params = CGI.unescape({'point' => pointRadio[:pointRadio][0], 'radio' => pointRadio[:pointRadio][1]}.to_query)
     uri = URI([url, params].join("?"))
     
@@ -61,8 +61,8 @@ class User < ActiveRecord::Base
       "cache-control" => "no-cache"
     })
 
-    radioTraffic = req.read_body
-    
+    radioTraffic = req.read_body[/{.+./]
+
     return JSON.parse(radioTraffic)
   end
 

@@ -5,19 +5,19 @@ class UsersController < ApplicationController
 
   def get_token
     @user = User.find(current_user.id)
-
-    @user.token = @user.uriToken[:access_token]
+    @user.token = @user.inTrafficTokens("https://api.intraffic.com.ve",true)["access_token"]
+    @user.tokenDNS = @user.inTrafficTokens("http://intraffic.duckdns.org:8096",false)["access_token"]
     @user.save
     respond_to do |format|
       format.html
-      format.json {render json: @user}
+      format.json {render json: "api: #{@user.token}, dns: #{@user.tokenDNS}"}
     end
   end
 
   def neighbour_traffic
     @user = User.find(current_user.id)
     point_radio = params[:coordinates]
-    respond = @user.radioTraffic(@user.token, point_radio)
+    respond = @user.radioTraffic(@user.tokenDNS, point_radio)
     render json: respond
   end
 

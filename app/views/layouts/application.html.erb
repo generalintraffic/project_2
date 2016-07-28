@@ -1,29 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>NeighbourTraffic</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-  <script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
-  <link href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css' rel='stylesheet' />
-  <%= javascript_include_tag 'jquery', 'bootstrap-sprockets', 'turbolinks' 'data-turbolinks-track' => true %>
-</head>
-<body>
+  <head>
+    <title>NeighbourTraffic</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
+    <%= javascript_include_tag 'jquery', 'bootstrap-sprockets', 'turbolinks' 'data-turbolinks-track' => true %>
+  </head>
+  <body>
 
-<% if user_signed_in? %>
-  <li>
-  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
-  </li>
-<% else %>
-  <li>
-  <%= link_to('Login', new_user_session_path)  %>  
-  </li>
-<% end %>
+  <%= yield %>
 
-<%= yield %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'inTraffic', 'data-turbolinks-track' => true %>
 
-<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-<%= javascript_include_tag 'inTraffic', 'data-turbolinks-track' => true %>
-
-</body>
+  </body>
 </html>

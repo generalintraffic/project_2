@@ -4,16 +4,22 @@ var map = L.mapbox.map('map', 'mapbox.streets', {
   zoomControl: true
 }).setView([10.488824641652126,-66.87480926513672], 14);
 
-// Punto de origen
+// Variables necesarias para la App
 
 var c, pointB, markB = true,
     fixedMarker, count = true, 
     x = true, origin = [], 
     final = [], coord= [], 
     dataCoord, radius = [],
-    aCount = 0;
+    aCount = 0, marker2,
+    trackLayer, radioLayer, 
+    radioChek = true;
+
+// iniciando APP!
 
 init();
+
+// Punto de origen
 
 function init(){
   map.on('click', function(ev) {
@@ -40,18 +46,20 @@ function coordinates(){
     })
   }).bindPopup('Punto de Origen').addTo(map);
   fixedCircle = L.circle(origin, 300).addTo(map)
-  console.log(origin);
-  // change();
+  console.log(origin, true);
+  change(origin, true);
 };
 
 // Invierte las posiciones del Array para que el API de InTraffic los reciba
 // como lo esta necesitando
 
-function change(points) {
+function change(points, Porigin = false) {
   var index = points[0];
   points[0] = points[1];
   points[1] = index;
-  // radioTraffic();
+  if (Porigin == true) {
+    radioTraffic();
+  }
 };
 
 // Ajax que obtiene el trafico del Radio
@@ -62,14 +70,22 @@ radioTraffic = () => {
     method:"POST",
     dataType:"json",
     data: {coordinates: 
-      {pointRadio: [origin.toString(),'0.01']}
+      {pointRadio: [origin.toString(),'0.002']}
     },
     success: (data) => {
       if (data.error) {
         getToken(true);
       } else {
-        var countriesLayer = L.geoJson(data).addTo(map);
-        map.fitBounds(countriesLayer.getBounds());
+        console.log(data)
+        if (radioChek == true) {
+          radioLayer = L.geoJson(data).addTo(map);
+          map.fitBounds(radioLayer.getBounds());
+        } else {
+          map.removeLayer(radioLayer)
+          radioLayer = L.geoJson(data).addTo(map);
+          map.fitBounds(radioLayer.getBounds());
+        }
+        radioChek = false;
       }
     },
     error: (xhr, status, err) => {  
@@ -101,17 +117,18 @@ getToken = (check) => {
 
 // Boton para confirmar Punto A
 
-function myFunction() {
-  if (confirm("¿Desea confirmar el punto actual?") == true) {
-    text();
-    x = false;
-    change(origin);
-    coord.push(origin.toString());
-    var container = document.getElementById('distance');
-    container.innerHTML = "Esta listo para escoger su Punto B"
-  } else {
-    init();
-  }
+selectedPoint();
+
+function selectedPoint() {
+  $('#continue').on('click', () => {
+    if (confirm("¿Desea confirmar el punto actual?") == true) {
+      text();
+      x = false;
+      coord.push(origin.toString());
+      var container = document.getElementById('distance');
+      container.innerHTML = "<p>Esta listo para escoger su Punto B</p>"
+    }
+  });
 }
 
 // Bolquea el punto A y continua para colocar el punto B
@@ -192,8 +209,8 @@ routing = () => {
 
 printingTrack = (data) => {
   console.log(data)
-  var countriesLayer = L.geoJson(data).addTo(map);
-  map.fitBounds(countriesLayer.getBounds());
+  trackLayer = L.geoJson(data).addTo(map);
+  map.fitBounds(trackLayer.getBounds());
   if (data) {
     parsingCoord(data);
   }
@@ -214,7 +231,7 @@ parsingCoord = (data) => {
 // Comienzo de la animacion 
 
 animation = () => {
-  var marker2 = L.Marker.movingMarker(dataCoord,
+  marker2 = L.Marker.movingMarker(dataCoord,
       30000, {autostart: true}).addTo(map);
   radioAnimationTraffic = setInterval(() => {
     radius.push(L.circle([marker2._currentLine[0].lat, marker2._currentLine[0].lng], 300).addTo(map))
@@ -233,3 +250,28 @@ animation = () => {
   }
 }
 
+// Reiniciar la App cuando el usuario lo desee
+
+$('#restart').on('click', () => {
+  restart();
+})
+
+restart = () => {
+  map.removeLayer(fixedMarker)
+  map.removeLayer(marker2)
+  map.removeLayer(trackLayer)
+  map.removeLayer(radius[radius.length-1])
+  map.removeLayer(pointB)
+  map.removeLayer(radioLayer)
+  c = null, pointB = null, markB = true,
+    fixedMarker = null, count = true, 
+    x = true, origin = [], 
+    final = [], coord= [], 
+    dataCoord = null, radius = [],
+    aCount = 0, marker2 = null,
+    trackLayer = null, radioLayer = null,
+    radioChek = true;
+  $("#distance").html("<button id="+'"continue"'+" class="+'"btn btn-primary btn-md btn-block"'+">Establecer como Origen</button>");
+  selectedPoint();
+  init();
+}

@@ -1,50 +1,36 @@
-
 <div id='map'></div>
-<pre id='distance' class='ui-distance'>
-<button type="button" class="btn btn-primary btn-md btn-block" onclick="myFunction()">Establecer como Origen</button>
+  <pre id='distance' class='ui-distance'>
+  <button id="continue" class="btn btn-primary btn-md btn-block">Establecer como Origen</button>
 </pre>
 
 <div id="button-wrapper"></div> 
 
 <div id="direction">
-	
 	<% if user_signed_in? %>
-  <li>
-
-<a href="/users/sign_out" data-method = "delete" data-toggle="tooltip" data-placement="botton" title="Cerrar Sesion">
-  <span class="glyphicon glyphicon-off td">
-</span>
-</a>
-  </li>
-
-<% else %>
-  <li>
-  <a href="/users/sign_in" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
-
-  <span class="glyphicon glyphicon-off td">
-  <!--<%= link_to('', new_user_session_path)  %>  -->
-
-  </span>
-
-  </a>
-  </li>
-<% end %>
-
-
-
-<div class="table-info">
-
-<dl>
-  <dt>Distancia en metros</dt>
-  <dd>
-    <div id ='meters' class='ui-meters'>
-</div> 
-    
-  </dd>
-</dl>
-
-</div>
-
+    <li>
+      <a href="/users/sign_out" data-method = "delete" data-toggle="tooltip" data-placement="botton" title="Cerrar Sesion">
+        <span class="glyphicon glyphicon-off td"></span>
+      </a>
+    </li>
+  <% else %>
+    <li>
+      <a href="/users/sign_in" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+        <span class="glyphicon glyphicon-off td"></span>
+      </a>
+    </li>
+  <% end %>
+  <div class="table-info text-center">
+    <dl>
+      <dt>Distancia en metros</dt>
+      <dd>
+        <div id ='meters' class='ui-meters'>
+        </div> 
+      </dd>
+    </dl>
+    <button class="btn-success" id="restart">
+      Resetear puntos
+    </button>
+  </div>
 </div>
 
 

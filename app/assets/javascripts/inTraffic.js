@@ -143,7 +143,7 @@ function selectedPoint() {
       x = false;
       coord.push(origin.toString());
       var container = document.getElementById('sms');
-      container.innerHTML = "<p>Esta listo para escoger su Punto B</p>"
+      container.innerHTML = "<p>Escoja punto destino</p>"
     }
   });
 }
@@ -156,9 +156,14 @@ function text(){
     x = false;
   }
   else if(!x){
+
+
     routing();
-    var container = document.getElementById('button-wrapper');
-    container.innerHTML = "<h3>Cagando su via...</h3>";
+
+
+
+    var container = document.getElementById('loading');
+    container.innerHTML = "<h4>Cagando su ruta</h4>";
   }
 };
 
@@ -182,10 +187,16 @@ function destination(){
 
 function end(){
   if (!count){
-    $("#circulo2").append(
-      $('<button>',{class:"btn btn-warning ta" ,type:"button"}).html('Destino').click(function(){
+    $("#circulo1").append(
+      $('<button>',{class:"btn btn-success ta" ,type:"button"}).html('Destino').click(function(){
         map.off("click");
         if (confirm("Destino") == true) {
+            var flag = L.icon({
+           iconUrl: 'assets/flag.png',
+           iconSize: [40, 50],
+         });
+          marker = L.marker(final,{icon:flag,title:'destino'}).addTo(map);
+
           change(final);
           coord.push(final.toString());
           console.log(coord);

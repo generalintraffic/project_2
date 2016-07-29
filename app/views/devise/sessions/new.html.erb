@@ -1,48 +1,48 @@
 
 <nav class="navbar navbar-default">
-<div class="container">
-  <div class= row>
-    <div class="col-md-3 col-md-offset-3">mas</div>
-    <div class="col-md-3 col-md-offset-3">
-    
-      <ul id="fat-menu" class=" log-button  dropdown">Log In
-        <a href="#" class="dropdown-toggle" id="drop3" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> 
-          <span class="caret"></span>
-        </a> 
-        <ul class="log-menu dropdown-menu " aria-labelledby="drop3"> 
-          <li>
-            <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-            <div class="log ">
-              <%= f.email_field :email, autofocus: true,class: 'form-group', placeholder: "Enter Email" %>
-             
-            </div>
+  <div class="container">
+    <div class= row>
+      <div class="col-md-3 col-md-offset-3">mas</div>
+      <div class="col-md-3 col-md-offset-3">
 
-            <div class="log ">
-              <%= f.password_field :password, autocomplete: "off",class: 'form-group', placeholder: "Password" %>
-            </div>
+        <ul id="fat-menu" class=" log-button  dropdown">Log In
+          <a href="#" class="dropdown-toggle" id="drop3" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> 
+            <span class="caret"></span>
+          </a> 
+          <ul class="log-menu dropdown-menu " aria-labelledby="drop3"> 
+            <li>
+              <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+              <div class="log ">
+                <%= f.email_field :email, autofocus: true,class: 'form-group', placeholder: "Enter Email" %>
 
-            <% if devise_mapping.rememberable? -%>
-            <div class="log ">
-              <%= f.check_box :remember_me %>
-              <%= f.label :remember_me %>
-            </div>
-            <% end -%>
+              </div>
 
-            <div class="log actions">
-              <%= f.submit "Log in",class: 'form-group' %>
-            </div>
-            <% end %>
-            <div class="log-message" data-toggle="modal" data-target=".bs-example-modal-sm">
-            <%= render "devise/shared/links" %>
-            
-            </div>
-          </li>
-        </ul> 
-      </ul>
-   
+              <div class="log ">
+                <%= f.password_field :password, autocomplete: "off",class: 'form-group', placeholder: "Password" %>
+              </div>
+
+              <% if devise_mapping.rememberable? -%>
+              <div class="log ">
+                <%= f.check_box :remember_me %>
+                <%= f.label :remember_me %>
+              </div>
+              <% end -%>
+
+              <div class="log actions">
+                <%= f.submit "Log in",class: 'form-group' %>
+              </div>
+              <% end %>
+              <div class="log-message" data-toggle="modal" data-target=".bs-example-modal-sm">
+                <%= render "devise/shared/links" %>
+
+              </div>
+            </li>
+          </ul> 
+        </ul>
+
+      </div>
     </div>
   </div>
-</div>
 </nav>
 
 
@@ -51,7 +51,7 @@
   <div class="row">
 
     <div class="col-md-6">
-      
+
       <div class="z10">
         <div class="device">
           <%=image_tag "mapMovil.jpg", :alt => "#" , :title => "#", :class =>"td" %>
@@ -75,11 +75,12 @@
 
     </div>
 
-  <div class="col-md-6">
-      <h1>Tráfico vecino rodante. Obtén la mejor ruta</h1>
-
-<p>Selecciona un punto en el mapa y consulta el tráfico vecino, veras como se pintan las calles en un radio de 300m, el cual se actualiza en tiempo real. Comparte el tráfico e informacion</p>
-
+    <div class="col-md-6">
+      <h1>Tráfico vecino rodante</h1>
+      <p>Selecciona un punto en el mapa y consulta el tráfico vecino, veras como se pintan las calles en un radio de 300m, el cual se actualiza en tiempo real. Comparte el tráfico e información.</p>
+      <div class="store">
+      <%=image_tag "appstore.jpg", :alt => "#" , :title => "#" %>
+      </div>
     </div>
-</div>
+  </div>
 

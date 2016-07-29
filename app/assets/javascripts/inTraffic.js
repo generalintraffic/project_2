@@ -46,6 +46,7 @@ function coordinates(){
     icon: L.icon({
       iconUrl: 'assets/market.png',
       iconSize: [40, 40]
+
     })
   }).bindPopup('Punto de Origen').addTo(map);
   fixedCircle = L.circle(origin, 300, {color: "rgba(158, 158, 158, 0.53)"}).addTo(map)
@@ -166,6 +167,7 @@ function text(){
 
     var container = document.getElementById('loading');
     container.innerHTML = "<h4>Cagando su ruta</h4>";
+
   }
 };
 

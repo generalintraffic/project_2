@@ -13,7 +13,7 @@ var c, pointB, markB = true,
     dataCoord, radius = [],
     aCount = 0, marker2,
     trackLayer, radioLayer, 
-    radioChek = true;
+    radioChek = true, flag;
 
 // iniciando APP!
 init();
@@ -191,7 +191,7 @@ function end(){
       $('<button>',{class:"btn btn-success ta" ,type:"button"}).html('Destino').click(function(){
         map.off("click");
         if (confirm("Destino") == true) {
-            var flag = L.icon({
+           flag = L.icon({
            iconUrl: 'assets/flag.png',
            iconSize: [40, 50],
          });
@@ -294,6 +294,7 @@ restart = () => {
   map.removeLayer(radius[radius.length-1])
   map.removeLayer(pointB)
   map.removeLayer(radioLayer)
+  map.removeLayer(flag)
   c = null, pointB = null, markB = true,
     fixedMarker = null, count = true, 
     x = true, origin = [], 
@@ -301,6 +302,6 @@ restart = () => {
     dataCoord = null, radius = [],
     aCount = 0, marker2 = null,
     trackLayer = null, radioLayer = null,
-    radioChek = true;
+    radioChek = true, flag = null;
   init();
 }

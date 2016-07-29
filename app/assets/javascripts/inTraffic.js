@@ -27,8 +27,6 @@ function init(){
 
       coordinates();
       count = false;
-
-      console.log('holis');
     }
     else if ( count == false && x== true ) {
       map.removeLayer(fixedMarker)
@@ -46,7 +44,6 @@ function coordinates(){
     icon: L.icon({
       iconUrl: 'assets/market.png',
       iconSize: [40, 40]
-
     })
   }).bindPopup('Punto de Origen').addTo(map);
   fixedCircle = L.circle(origin, 300, {color: "rgba(158, 158, 158, 0.53)"}).addTo(map)
@@ -167,7 +164,6 @@ function text(){
 
     var container = document.getElementById('loading');
     container.innerHTML = "<h4>Cagando su ruta</h4>";
-
   }
 };
 
@@ -298,14 +294,9 @@ restart = () => {
   map.removeLayer(radius[radius.length-1])
   map.removeLayer(pointB)
   map.removeLayer(radioLayer)
-<<<<<<< HEAD
- 
-=======
   map.removeLayer(flag)
->>>>>>> 136927b907e0d67ba027c62a86504682779e714f
   c = null, pointB = null, markB = true,
     fixedMarker = null, count = true, 
-    flag = null, count = true,
     x = true, origin = [], 
     final = [], coord= [], 
     dataCoord = null, radius = [],

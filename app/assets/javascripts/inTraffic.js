@@ -27,6 +27,8 @@ function init(){
 
       coordinates();
       count = false;
+
+      console.log('holis');
     }
     else if ( count == false && x== true ) {
       map.removeLayer(fixedMarker)
@@ -294,8 +296,10 @@ restart = () => {
   map.removeLayer(radius[radius.length-1])
   map.removeLayer(pointB)
   map.removeLayer(radioLayer)
+ 
   c = null, pointB = null, markB = true,
     fixedMarker = null, count = true, 
+    flag = null, count = true,
     x = true, origin = [], 
     final = [], coord= [], 
     dataCoord = null, radius = [],

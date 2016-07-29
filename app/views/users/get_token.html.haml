@@ -1,0 +1,35 @@
+#map
+#button-wrapper
+#direction
+  - if user_signed_in?
+    %li
+      %a{"data-method" => "delete", "data-placement" => "botton", "data-toggle" => "tooltip", :href => "/users/sign_out", :title => "Cerrar Sesion"}
+        %span.glyphicon.glyphicon-off.td
+  - else
+    %li
+      %a{"data-placement" => "bottom", "data-toggle" => "tooltip", :href => "/users/sign_in", :title => "Tooltip on bottom"}
+        %span.glyphicon.glyphicon-off.td
+  .table-info.text-center
+    %dl
+      %dt#sms
+      %dd#loading
+      %dt#meters
+      %dd
+  #legend.legend
+    #sms-legend.sms-legend
+      %h5 Trafico en directo
+    #quick.quick
+      %h5 Rápido
+    #img-legend.img-legend
+    #slow.slow
+      %h5 Lento
+  #distance.container-semaforo
+    #box-out
+      #box-inside
+        %button#continue.td{"data-placement" => "botton", "data-toggle" => "tooltip", :title => "Establecer como Origen"}
+          #circulo3.color3
+        %button.btn.btn-primary.tf{"data-placement" => "botton", "data-toggle" => "tooltip", :title => "Establecer como Destino", :type => "button"}
+          #circulo1.color1
+        #circulo2.color2
+          %button#restart.btn.btn-warning.ta
+            Restart

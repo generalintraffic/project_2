@@ -113,6 +113,7 @@ span.glyphicon.glyphicon-off.td{
 /****devise******/
 
 
+
 .container.td{
   background: red;
 }
@@ -375,7 +376,11 @@ button.btn.btn-warning.ta{
 }
 .log-button{
   letter-spacing: 1px;
+  position: absolute;
+  top: 10px;
+  border-radius: 14px;
 }
+
 .log-menu{
   margin-top: 0px;
   margin-bottom: 9px;
@@ -383,4 +388,12 @@ button.btn.btn-warning.ta{
 .log-message{
   margin: 10px 10px 0px 10px;
 
+}
+
+a.btn.btn-success.td {
+    border-radius: 14px;
+    position: absolute;
+    top: 5px;
+    right: 94px;
+    background: #3887be;
 }

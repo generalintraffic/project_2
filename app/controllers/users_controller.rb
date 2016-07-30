@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   
 
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:guest_user]
 
   def get_token
     @user = User.find(current_user.id)
@@ -41,9 +41,13 @@ class UsersController < ApplicationController
   helper_method :guest_user
 
   def guest_user
-    u = User.create(:name => "guest", :email => "guest_#{Time.now.to_i}#{rand(100)}@example.com", :password => "guest_#{Time.now.to_i}#{rand(100)}")
-    if u.save
-      redirect_to {token_path}
+     u = User.new(email:"guest_#{Time.now.to_i}#{rand(100)}@example.com", :password => "guest_1234")
+   if u.save
+     user = User.last
+     sign_in(user)
+    redirect_to  token_path
+  else
+     render json:"Error 404"
     end
   end
 

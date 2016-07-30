@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get '/token' => 'users#get_token'
   post '/pointers' => 'users#dataPointers'
   post '/neighbour' => 'users#neighbour_traffic'
+  get '/guest' => 'users#guest_user'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

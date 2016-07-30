@@ -187,8 +187,8 @@ function destination(){
 
 function end(){
   if (!count){
-    $("#circulo1").append(
-      $('<button>',{class:"btn btn-success ta" ,type:"button"}).html('Destino').click(function(){
+    $("#finish").append(
+      $('<a>',{type:"text/html"}).html('Destino').click(function(){
         map.off("click");
         if (confirm("Destino") == true) {
            flag = L.icon({

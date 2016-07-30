@@ -32,36 +32,38 @@
       <h5>Trafico en directo</h5>
     </div>
     <div id ="quick" class="quick">
-    <h5>Rápido</h5>
+    <%=image_tag "tortu.jpg", :alt => "#" , :title => "#", :class =>"tortu" %>
     </div>
     <div  id="img-legend" class="img-legend">
     </div>
     <div id="slow" class="slow">
-    <h5>Lento</h5>
+    <%=image_tag "liebre.jpg", :alt => "#" , :title => "#", :class =>"tortu" %>
+    </div>
     </div>
 
-    </div>
+
+<div class="button-leyend">
+<div class="container">
+<dl>
+      <dt><button id="continue">  <%=image_tag "market.png", :alt => "#" , :title => "#", :class =>"origin" %></button></dt>
+      <dd>Establecer como Origen
+      </dd>
+      <dt id="finish" class="td"><%=image_tag "flag.png", :alt => "#" , :title => "#", :class =>"finish" %>
+      </dt>
+      <dd>Establecer como Destino</dd>
+       <dt class="restart"><button id="restart">  <%=image_tag "clear.png", :alt => "#" , :title => "#", :class =>"restart" %></button></dt>
+        <dd>Restart</dd>
+    </dl>
+</div>
+</div>
 
 
-  <div id= "distance" class="container-semaforo">
-    <div id="box-out">
-      <div id="box-inside">
-        <button id="continue" class="td" data-toggle="tooltip" data-placement="botton" title="Establecer como Origen">
-          <div id="circulo3" class="color3"></div>
-        </button>
-        <button type="button"  class="btn btn-primary tf" data-toggle="tooltip" data-placement="botton" title="Establecer como Destino">
-          <div id="circulo1" class="color1">
-          </div>
-        </button>
 
-        <div id="circulo2" class="color2">
-          <button class="btn btn-warning ta" id="restart">
-            Restart
-          </button> 
-          
-        </div>
-        
-        
-      </div>
-    </div>
+
+
+
+
+
+  
+
   </div>

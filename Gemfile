@@ -5,7 +5,14 @@ gem 'rubysl-base64', '~> 2.0'
 gem 'rest-client', '~> 1.8'
 gem 'devise', '~> 4.2'
 gem 'better_errors', '~> 2.1', '>= 2.1.1'
-gem 'oauth2', '~> 1.2'
+gem 'json', '~> 1.8', '>= 1.8.3'
+gem 'npm-rails'
+gem 'leaflet-rails'
+gem 'mapbox-rails'
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'babel-source' , '~> 5.8.35'
+gem 'babel-transpiler','~>0.7.0'
+
 # ************************* #
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

@@ -1,0 +1,249 @@
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "mapbox";
+@import "leaflet";
+
+
+
+
+
+body { 
+  margin:0; padding:0; 
+}
+
+#map { 
+  position:absolute; 
+  top:0; 
+  bottom:0; 
+  width:100%;
+  
+}
+
+#direction {
+  z-index: 99;
+  background: rgba(0,0,0,.8);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  position: absolute;
+  width: 225px;
+}
+
+
+
+
+
+
+
+span.glyphicon.glyphicon-off.td{
+
+  top:13px;
+  font-size: 25px;
+  left: 80px;
+
+}
+
+.table-info{
+  position: absolute;
+  color:#fff;
+  left: 22px;
+  top:60px;
+  width: 180px;
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 999;
+}
+
+.legend{
+ width: 353px;
+ height: 39px;
+ background: #fff; 
+ position: absolute;
+ top: 252px;
+}
+
+.sms-legend {
+    position: absolute;
+    bottom:27px;
+    left:54px;
+    height: 20px;
+    
+}
+
+.quick{
+    position: absolute;
+    top: 2px;
+    left: 19px;
+}
+
+img.tortu {
+    width: 11%;
+}
+
+
+.slow{
+  position: absolute;
+  top: 11px;
+  left:161px;
+}
+
+.img-legend{
+    position: absolute;
+    background-image: url("leyenda.png");
+    top: 20px;
+    width: 22%;
+    height: 14px;
+    left:73px;   
+
+}
+
+
+/*+++++++++++botones+++++++++++++++*/
+
+.button-leyend {
+    
+    width: 353px;
+    height: 100px;
+    position: absolute;
+    top: 348px;
+    color:#fff;
+}
+
+img.restart {
+    width: 32px;
+    height: 37px;
+}
+
+
+img.finish {
+    width: 40px;
+    height: 40px;
+}
+
+
+button.flag{
+  width: 32px;
+  height: 37px;
+  background-image: url("flag2.jpg");
+
+}
+
+dt#finish {
+    margin-top: 15px;
+}
+
+dt.restart {
+    margin-top: 15px;
+}
+
+
+/****devise******/
+
+
+
+.container.td{
+  background: red;
+}
+
+.z10{
+  z-index: 10;
+}
+
+.device {
+  height: auto;
+  width: 50%;
+  
+  border-radius: 24px;
+  border-right: 13px solid #F4F4F4;
+  border-left: 13px solid #F4F4F4;
+  border-top: 60px solid #F4F4F4;
+  border-bottom: 70px solid #F4F4F4;
+  box-shadow: 0px 0px 0px 4px rgba(55, 79, 89, 0.18);
+  position: relative;
+
+}
+
+img.td{
+  width: 100%
+
+}
+
+/* device-details-circle*/
+.device-details {
+  position: absolute;
+  top: -33px;
+  background: rgba(64, 64, 64, 0.3);
+  left: 75px;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  /* color: #404040; */
+}
+
+/*phone-rectanguler*/
+
+.phone {
+
+  position: absolute;
+  width: 86px;
+  height: 11px;
+  background: rgba(64, 64, 64, 0.3);
+  top: 3px;
+  left: 25px;
+  border-radius: 29px;
+}
+
+
+.home {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: 480px;
+  left: 38px;
+  background: #fcfcfc;
+  border-radius: 50%;
+  border: solid 1px;
+
+  /* bottom: -16px; */
+}
+
+
+h1{
+  text-align: center
+}
+
+p{
+  text-align: center
+}
+
+
+/*Log in*/
+.log{
+  margin: 10px 10px -15px 10px; 
+}
+.log-button{
+  letter-spacing: 1px;
+  position: absolute;
+  top: 10px;
+  border-radius: 14px;
+}
+
+.log-menu{
+  margin-top: 0px;
+  margin-bottom: 9px;
+}
+.log-message{
+  margin: 10px 10px 0px 10px;
+
+}
+
+a.btn.btn-success.td {
+    border-radius: 14px;
+    position: absolute;
+    top: 5px;
+    right: 94px;
+    background: #3887be;
+}
+

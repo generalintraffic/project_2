@@ -1,15 +1,23 @@
 Rails.application.routes.draw do
   
+<<<<<<< HEAD
   root 'welcome#index'
   get '/token' => 'users#get_token'
   post '/neighboar' => 'users#neighbour_traffic'
   post '/simulation' => 'users#simulation'
+=======
+  devise_for :users
+  get '/token' => 'users#get_token'
+  post '/pointers' => 'users#dataPointers'
+  post '/neighbour' => 'users#neighbour_traffic'
+  get '/guest' => 'users#guest_user'
+>>>>>>> respaldogeneral
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'users#get_token'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

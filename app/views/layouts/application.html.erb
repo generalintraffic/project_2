@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>NeighbourTraffic</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <head>
+    <title>NeighbourTraffic</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
+    <%= javascript_include_tag 'jquery', 'bootstrap-sprockets', 'turbolinks' 'data-turbolinks-track' => true %>
+  </head>
+  <body>
+
+  <%= yield %>
+
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <%= javascript_include_tag 'inTraffic', 'data-turbolinks-track' => true %>
 
-<%= yield %>
-
-</body>
+  </body>
 </html>

@@ -154,15 +154,11 @@ function text(){
   if(x){
     destination();
     x = false;
+    document.getElementById("continue").disabled = true;
   }
   else if(!x){
-
-
     routing();
-
-
-
-    var container = document.getElementById('loading');
+    var container = document.getElementById('sms');
     container.innerHTML = "<h4>Cagando su ruta</h4>";
   }
 };
@@ -188,9 +184,10 @@ function destination(){
 function end(){
   if (!count){
     $("#finish").html(
-      $('<button>',{class:"final", type:"button"}).html('').click(function(){
+      $('<div>',{class:"final"}).click(function(){
         map.off("click");
         if (confirm("Destino") == true) {
+           map.removeLayer(pointB)
            flagIcon = L.icon({
            iconUrl: 'assets/flag.png',
            iconSize: [40, 50],
@@ -236,6 +233,7 @@ routing = () => {
 // Pintando el GeoJson en el Mapa
 
 printingTrack = (data) => {
+   $("#sms").html('');
   trackLayer = L.geoJson(data).addTo(map);
   map.fitBounds(trackLayer.getBounds());
   if (data) {
@@ -288,6 +286,7 @@ $('#restart').on('click', () => {
 })
 
 restart = () => {
+  document.getElementById("continue").disabled = false;
   map.removeLayer(fixedMarker)
   map.removeLayer(marker2)
   map.removeLayer(trackLayer)

@@ -44,7 +44,7 @@ class UsersController < ApplicationController
     end
   end
 
-  helper_method :guest_user
+
 
   def guest_user
      u = User.new(email:"guest_#{Time.now.to_i}#{rand(100)}@example.com", :password => "guest_1234")

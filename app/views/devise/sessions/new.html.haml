@@ -1,0 +1,40 @@
+%nav.navbar.navbar-default
+  .container
+    .row
+      .col-md-3.col-md-offset-3
+      .col-md-3.col-md-offset-3
+        %ul#fat-menu.log-button.dropdown
+          Log In
+          %a#drop3.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+            %span.caret
+          %ul.log-menu.dropdown-menu{"aria-labelledby" => "drop3"}
+            %li
+              = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+                .log
+                  = f.email_field :email, autofocus: true,class: 'form-group', placeholder: "Enter Email"
+                .log
+                  = f.password_field :password, autocomplete: "off",class: 'form-group', placeholder: "Password"
+                - if devise_mapping.rememberable?
+                  .log
+                    = f.check_box :remember_me
+                    = f.label :remember_me
+                .log.actions
+                  = f.submit "Log in",class: 'form-group'
+              .log-message{"data-target" => ".bs-example-modal-sm", "data-toggle" => "modal"}
+                = render "devise/shared/links"
+        %a.btn.btn-success.td{:href => "http://localhost:3000/guest"} Guest
+.container
+  .row
+    .col-md-6
+      .z10
+        .device
+          = image_tag "mapMovil.jpg", :alt => "#" , :title => "#", :class =>"td"
+          .device-details
+            .phone
+            .home
+              .home-phone
+    .col-md-6
+      %h1 Tráfico vecino rodante
+      %p Selecciona un punto en el mapa y consulta el tráfico vecino, veras como se pintan las calles en un radio de 300m, el cual se actualiza en tiempo real. Comparte el tráfico e información.
+      .store
+        = image_tag "appstore.jpg", :alt => "#" , :title => "#"

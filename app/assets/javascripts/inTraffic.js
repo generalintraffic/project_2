@@ -154,15 +154,11 @@ function text(){
   if(x){
     destination();
     x = false;
+    document.getElementById("continue").disabled = true;
   }
   else if(!x){
-
-
     routing();
-
-
-
-    var container = document.getElementById('loading');
+    var container = document.getElementById('sms');
     container.innerHTML = "<h4>Cagando su ruta</h4>";
   }
 };
@@ -187,15 +183,16 @@ function destination(){
 
 function end(){
   if (!count){
-    $("#finish").append(
-      $('<a>',{type:"text/html"}).html('Destino').click(function(){
+    $("#finish").html(
+      $('<div>',{class:"final"}).click(function(){
         map.off("click");
         if (confirm("Destino") == true) {
-           flag = L.icon({
+           map.removeLayer(pointB)
+           flagIcon = L.icon({
            iconUrl: 'assets/flag.png',
            iconSize: [40, 50],
          });
-          marker = L.marker(final,{icon:flag,title:'destino'}).addTo(map);
+          flag = L.marker(final,{icon:flagIcon,title:'destino'}).addTo(map);
 
           change(final);
           coord.push(final.toString());
@@ -236,6 +233,7 @@ routing = () => {
 // Pintando el GeoJson en el Mapa
 
 printingTrack = (data) => {
+   $("#sms").html('');
   trackLayer = L.geoJson(data).addTo(map);
   map.fitBounds(trackLayer.getBounds());
   if (data) {
@@ -259,7 +257,7 @@ parsingCoord = (data) => {
 
 animation = () => {
   marker2 = L.Marker.movingMarker(dataCoord,
-      30000, {autostart: true}).addTo(map);
+      50000, {autostart: true}).addTo(map);
   radioAnimationTraffic = setInterval(() => {
     radius.push(L.circle([marker2._currentLine[0].lat, marker2._currentLine[0].lng], 300, {color: "rgba(158, 158, 158, 0.53)"}).addTo(map))
     radioAjax = [marker2._currentLine[0].lat, marker2._currentLine[0].lng]
@@ -270,7 +268,7 @@ animation = () => {
       reloadCircle(radius[aCount-2]);
     }
   }, 5000);
-  setTimeout(() => {clearInterval(radioAnimationTraffic), console.log('end')}, 31000);
+  setTimeout(() => {clearInterval(radioAnimationTraffic), console.log('end')}, 51000);
   reloadCircle = (radius) => {
     if (radius) {
       map.removeLayer(radioLayer)
@@ -288,6 +286,7 @@ $('#restart').on('click', () => {
 })
 
 restart = () => {
+  document.getElementById("continue").disabled = false;
   map.removeLayer(fixedMarker)
   map.removeLayer(marker2)
   map.removeLayer(trackLayer)

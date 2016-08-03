@@ -12,7 +12,8 @@ gem 'mapbox-rails'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'babel-source' , '~> 5.8.35'
 gem 'babel-transpiler','~>0.7.0'
-
+gem 'haml', '~> 4.0', '>= 4.0.7'
+gem 'haml-rails', '~> 0.9.0'
 # ************************* #
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

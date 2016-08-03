@@ -1,0 +1,40 @@
+#map
+#button-wrapper
+#direction
+  - if user_signed_in?
+    %li
+      %a{"data-method" => "delete", "data-placement" => "botton", "data-toggle" => "tooltip", :href => "/users/sign_out", :title => "Cerrar Sesion"}
+        %span.glyphicon.glyphicon-off.td
+  - else
+    %li
+      %a{"data-placement" => "bottom", "data-toggle" => "tooltip", :href => "/users/sign_in", :title => "Tooltip on bottom"}
+        %span.glyphicon.glyphicon-off.td
+  .table-info.text-center
+    %dl
+      %dt#sms
+      %dd#loading
+      %dt#meters
+      %dd
+  #legend.legend
+    #sms-legend.sms-legend
+      %h5 Trafico en directo
+    #quick.quick
+      = image_tag "tortu.jpg", :alt => "#" , :title => "#", :class =>"tortu"
+    #img-legend.img-legend
+    #slow.slow
+      = image_tag "liebre.jpg", :alt => "#" , :title => "#", :class =>"tortu"
+  .button-leyend
+    .container
+      %dl
+        %dt
+          %button#continue
+            = image_tag "market.png", :alt => "#" , :title => "#", :class =>"origin"
+        %dd
+          Establecer como Origen
+        %dt#finish.td
+          = image_tag "flag.png", :alt => "#" , :title => "#", :class =>"finish"
+        %dd Establecer como Destino
+        %dt.restart
+          %button#restart
+            = image_tag "clear.png", :alt => "#" , :title => "#", :class =>"restart"
+        %dd Restart

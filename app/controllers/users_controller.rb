@@ -1,12 +1,6 @@
 class UsersController < ApplicationController
   
 
-<<<<<<< HEAD
-  def index
-    
-  end
-
-=======
   before_action :authenticate_user!, except: [:guest_user]
 
   def get_token
@@ -62,5 +56,4 @@ class UsersController < ApplicationController
   def params_user
     pramas.require(:user).permit(:token, :tokenDNS)
   end
->>>>>>> respaldogeneral
 end
